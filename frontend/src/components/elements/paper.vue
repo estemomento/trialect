@@ -28,10 +28,10 @@ export default {
       background: #fff;
       width: 700px;
       box-shadow: 2px 2px 5px #666;
-      padding: 10px;
+      padding: 24px;
       border-radius: 5px;
 
-      h1 {
+      h1, h2, h3 {
         font-family: "Source Han Serif CN", serif;
       }
 
