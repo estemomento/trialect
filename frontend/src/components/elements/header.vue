@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <span>
-      <p class="logo">Trialect</p>
+      <router-link class="logo" to="/">Trialect</router-link>
       <p class="slogan">——「记录和保护茂名方言」</p>
     </span>
     <tr-nav/>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import trNav from '@/components/nav'
+import trNav from '@/components/elements/nav'
 
 export default {
   name: 'header',
@@ -19,12 +19,15 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../../assets/const.scss';
+
 header {
-  background: #664010;
+  background: $main-color;
   display: flex;
   justify-content: space-between; 
   align-items: center;
+  height: 70px;
 }
 
 span {
@@ -34,11 +37,12 @@ span {
 }
 
 .logo {
+  text-decoration: none;
   color: white;
   font-weight: bold;
   margin: 10px 20px 10px 40px;
   font-size: 40px;
-  text-shadow: 1px 2px #121212 ;
+  text-shadow: 1px 2px #000 ;
 }
 
 .slogan {

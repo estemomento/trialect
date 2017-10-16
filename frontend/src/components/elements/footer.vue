@@ -20,6 +20,7 @@ footer {
   background: #664010;
   display: flex;
   justify-content: center;
+  height: 40px;
 }
 
 p, a {

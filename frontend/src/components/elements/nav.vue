@@ -2,9 +2,8 @@
   <nav>
     <ul>
       <li><router-link to="/">主页</router-link></li>
-      <li><router-link to="/intro">简介</router-link></li>
-      <li><router-link to="/pinyin">拼音方案</router-link></li>
-      <li><router-link to="/download">资源下载</router-link></li>
+      <li><router-link to="/pinyin">拼音</router-link></li>
+      <li><router-link to="/download">下载</router-link></li>
       <li><router-link to="/about">关于</router-link></li>
     </ul>
   </nav>
@@ -16,7 +15,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../../assets/const.scss';
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -39,7 +40,7 @@ a {
 }
 
 a:hover {
-  background-color: #967040;
+  background-color: $assist-color;
   border-radius: 10px;
 }
 

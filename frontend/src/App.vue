@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import trHeader from '@/components/header'
-import trFooter from '@/components/footer'
+import trHeader from '@/components/elements/header'
+import trFooter from '@/components/elements/footer'
 
 export default {
   name: 'app',
@@ -21,7 +21,8 @@ export default {
 
 <style lang="scss">
 * {
-  margin: 0
+  margin: 0;
+  font-family: "Inziu Roboto SC";
 }
 
 #app {
