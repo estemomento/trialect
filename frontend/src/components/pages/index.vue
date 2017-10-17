@@ -6,12 +6,7 @@
         <p class="small">——客家谚语</p>
       </div>
     </div>
-    <div class="search-wrapper">
-      <form class="search" @submit.prevent="search">
-        <input type="search" name="input-char" id="input-char" placeholder="请输入要查询的汉字">
-        <button type="submit">查询</button>
-      </form>
-    </div>
+    <search/>
     <div class="card-wrapper">
       <card :img="pinyinBg" title="拼音方案" info="展示茂名白话、电白黎话、电白涯话三种方言的拼音方案以及各声韵调发音" addr="/pinyin"></card>
       <card :img="downloadBg" title="资源下载" info="提供茂名方言的历史资料、现有数据、专业研究等资料下载" addr="/download"></card>
@@ -22,22 +17,19 @@
 
 <script>
 import card from '@/components/elements/card'
+import search from '@/components/elements/search'
 
 export default {
   name: 'index',
   components: {
-    card
+    card,
+    search
   },
   data () {
     return {
       pinyinBg: require('@/assets/pinyin.jpg'),
       downloadBg: require('@/assets/download.jpg'),
       aboutBg: require('@/assets/about.jpg')
-    }
-  },
-  methods: {
-    search () {
-      // TODO
     }
   }
 }
@@ -85,40 +77,6 @@ export default {
       .small {
         font-size: 12px;
         align-self: flex-end;
-      }
-    }
-  }
-
-  .search-wrapper {
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .search {
-      height: 60px;
-      box-shadow: 2px 2px 5px #666;
-      border: 0;
-      border-radius: 5px;
-      background: #fff;
-
-      input[type=search] {
-        width: 400px;
-        height: 60px;
-        font-size: 24px;
-        border: 0;
-        border-radius: 5px;
-        padding: 10px;
-      }
-
-      button {
-        width: 100px;
-        height: 60px;
-        font-size: 24px;
-        border: 0;
-        border-radius: 5px;
-        padding: 10px;
       }
     }
   }

@@ -1,7 +1,7 @@
 <template>
   <div class="pinyin">
     <paper title="拼音">
-      <h2>茂名白话</h2>
+      <h2>茂名白话（市区）</h2>
       <h3>声母</h3>
       <table>
         <tr>
@@ -14,6 +14,7 @@
           <th>t</th>
           <th>n</th>
           <th>l</th>
+          <th>sl</th>
         </tr>
         <tr>
           <th>音标</th>
@@ -25,6 +26,7 @@
           <td>/tʰ/</td>
           <td>/n/</td>
           <td>/l/</td>
+          <td>/ɬ/</td>
         </tr>
         <tr>
           <th>例字</th>
@@ -36,6 +38,7 @@
           <td>拖</td>
           <td>挪</td>
           <td>罗</td>
+          <td>锁</td>
         </tr>
       </table>
       <table>
@@ -43,13 +46,14 @@
           <th>声母</th>
           <th>g</th>
           <th>k</th>
+          <th>gw</th>
+          <th>kw</th>
           <th>ng</th>
           <th>h</th>
           <th>z</th>
           <th>c</th>
           <th>s</th>
           <th>nj</th>
-          <th>sl</th>
           <th>j</th>
           <th>w</th>
         </tr>
@@ -57,13 +61,14 @@
           <th>音标</th>
           <td>/k/</td>
           <td>/kʰ/</td>
+          <td>/kʷ/</td>
+          <td>/kʷʰ/</td>
           <td>/ŋ/</td>
           <td>/h/</td>
           <td>/tʃ/</td>
           <td>/tʃʰ/</td>
           <td>/ʃ/</td>
           <td>/ɳ/</td>
-          <td>/ɬ/</td>
           <td>/j/</td>
           <td>/w/</td>
         </tr>
@@ -71,20 +76,21 @@
           <th>例字</th>
           <td>哥</td>
           <td>柯</td>
+          <td>光</td>
+          <td>框</td>
           <td>我</td>
           <td>可</td>
           <td>左</td>
           <td>错</td>
           <td>所</td>
           <td>日</td>
-          <td>锁</td>
           <td>也</td>
           <td>话</td>
         </tr>
       </table>
       <h3>韵母</h3>
       <hr>
-      <h2>电白黎话</h2>
+      <h2>电白黎话（霞洞）</h2>
       <h3>声母</h3>
       <table>
         <tr>
@@ -97,6 +103,7 @@
           <th>t</th>
           <th>n</th>
           <th>l</th>
+          <th>sl</th>
         </tr>
         <tr>
           <th>音标</th>
@@ -108,6 +115,7 @@
           <td>/tʰ/</td>
           <td>/n/</td>
           <td>/l/</td>
+          <td>/ɬ/</td>
         </tr>
         <tr>
           <th>例字</th>
@@ -119,6 +127,7 @@
           <td>桃</td>
           <td>挪</td>
           <td>罗</td>
+          <td>所</td>
         </tr>
       </table>
       <table>
@@ -130,7 +139,6 @@
           <th>h</th>
           <th>z</th>
           <th>c</th>
-          <th>sl</th>
           <th>nj</th>
           <th>j</th>
         </tr>
@@ -140,9 +148,8 @@
           <td>/kʰ/</td>
           <td>/ŋ/</td>
           <td>/h/</td>
-          <td>/tʃ/</td>
-          <td>/tʃʰ/</td>
-          <td>/ɬ/</td>
+          <td>/ts/</td>
+          <td>/tsʰ/</td>
           <td>/ɳ/</td>
           <td>/j/</td>
         </tr>
@@ -154,13 +161,172 @@
           <td>好</td>
           <td>左</td>
           <td>错</td>
-          <td>所</td>
           <td>让</td>
           <td>二</td>
+        </tr>
+      </table>
+      <h3>韵母</h3>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th></th>
+          <th>a</th>
+          <th>o</th>
+          <th>e</th>
+          <th>ai</th>
+          <th>oi</th>
+          <th>au</th>
+          <th>eu</th>
+          <th>am</th>
+          <th>em</th>
+          <th>an</th>
+          <th>en</th>
+          <th>ang</th>
+          <th>ong</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td></td>
+          <td>/a/</td>
+          <td>/ɔ/</td>
+          <td>/ɛ/</td>
+          <td>/ai/</td>
+          <td>/oi/</td>
+          <td>/au/</td>
+          <td>/eu/</td>
+          <td>/am/</td>
+          <td>/em/</td>
+          <td>/an/</td>
+          <td>/en/</td>
+          <td>/aŋ/</td>
+          <td>/oŋ/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td></td>
+          <td>亚</td>
+          <td>学</td>
+          <td>哑</td>
+          <td>闲</td>
+          <td>鞋</td>
+          <td>奥</td>
+          <td>乌</td>
+          <td>暗</td>
+          <td>醮</td>
+          <td>按</td>
+          <td>应</td>
+          <td>红</td>
+          <td>中</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>i</th>
+          <th>ia</th>
+          <th>io</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>iau</th>
+          <th>iu</th>
+          <th>iam</th>
+          <th>im</th>
+          <th></th>
+          <th>in</th>
+          <th>iang</th>
+          <th>iong</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/i/</td>
+          <td>/ia/</td>
+          <td>/io/</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>/iau/</td>
+          <td>/iu/</td>
+          <td>/iam/</td>
+          <td>/im/</td>
+          <td></td>
+          <td>/in/</td>
+          <td>/iaŋ/</td>
+          <td>/ioŋ/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>医</td>
+          <td>营</td>
+          <td>腰</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>忧</td>
+          <td>油</td>
+          <td>厌</td>
+          <td>音</td>
+          <td></td>
+          <td>因</td>
+          <td>央</td>
+          <td>啄</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>u</th>
+          <th>ua</th>
+          <th></th>
+          <th>ue</th>
+          <th>uai</th>
+          <th>ui</th>
+          <th>uau</th>
+          <th></th>
+          <th>uam</th>
+          <th></th>
+          <th>uan</th>
+          <th>un</th>
+          <th>uang</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/u/</td>
+          <td>/ua/</td>
+          <td></td>
+          <td>/uɛ/</td>
+          <td>/uai/</td>
+          <td>/ui/</td>
+          <td>/uau/</td>
+          <td></td>
+          <td>/uam/</td>
+          <td></td>
+          <td>/uan/</td>
+          <td>/un/</td>
+          <td>/uaŋ/</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>有</td>
+          <td>碗</td>
+          <td></td>
+          <td>话</td>
+          <td>坏</td>
+          <td>位</td>
+          <td>否</td>
+          <td></td>
+          <td>犯</td>
+          <td></td>
+          <td>湾</td>
+          <td>温</td>
+          <td>往</td>
+          <td></td>
         </tr>
       </table>
       <hr>
-      <h2>电白涯话</h2>
+      <h2>电白涯话（沙琅）</h2>
       <h3>声母</h3>
       <table>
         <tr>
@@ -168,33 +334,36 @@
           <th>b</th>
           <th>p</th>
           <th>m</th>
-          <th>w</th>
+          <th>f</th>
           <th>d</th>
           <th>t</th>
           <th>n</th>
           <th>l</th>
+          <th>sl</th>
         </tr>
         <tr>
           <th>音标</th>
           <td>/p/</td>
           <td>/pʰ/</td>
           <td>/m/</td>
-          <td>/w/</td>
+          <td>/f/</td>
           <td>/t/</td>
           <td>/tʰ/</td>
           <td>/n/</td>
           <td>/l/</td>
+          <td>/ɬ/</td>
         </tr>
         <tr>
           <th>例字</th>
           <td>波</td>
           <td>坡</td>
           <td>摸</td>
-          <td>我</td>
-          <td>刀</td>
-          <td>桃</td>
+          <td>科</td>
+          <td>多</td>
+          <td>拖</td>
           <td>挪</td>
           <td>罗</td>
+          <td>锁</td>
         </tr>
       </table>
       <table>
@@ -202,37 +371,314 @@
           <th>声母</th>
           <th>g</th>
           <th>k</th>
+          <th>gw</th>
+          <th>kw</th>
           <th>ng</th>
           <th>h</th>
           <th>z</th>
           <th>c</th>
-          <th>sl</th>
+          <th>s</th>
           <th>nj</th>
           <th>j</th>
+          <th>w</th>
         </tr>
         <tr>
           <th>音标</th>
           <td>/k/</td>
           <td>/kʰ/</td>
+          <td>/kʷ/</td>
+          <td>/kʷʰ/</td>
           <td>/ŋ/</td>
           <td>/h/</td>
-          <td>/tʃ/</td>
-          <td>/tʃʰ/</td>
-          <td>/ɬ/</td>
+          <td>/ts/</td>
+          <td>/tsʰ/</td>
+          <td>/s/</td>
           <td>/ɳ/</td>
           <td>/j/</td>
+          <td>/w/</td>
         </tr>
         <tr>
           <th>例字</th>
-          <td>稿</td>
-          <td>可</td>
-          <td>卧</td>
+          <td>哥</td>
+          <td>戈</td>
+          <td>光</td>
+          <td>框</td>
+          <td>鹅</td>
           <td>好</td>
           <td>左</td>
-          <td>错</td>
-          <td>所</td>
-          <td>让</td>
-          <td>二</td>
+          <td>初</td>
+          <td>梳</td>
+          <td>义</td>
+          <td>衣</td>
+          <td>蛙</td>
+        </tr>
+      </table>
+      <h3>韵母</h3>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>a</th>
+          <th>ai</th>
+          <th>au</th>
+          <th>am</th>
+          <th>an</th>
+          <th></th>
+          <th>ap</th>
+          <th>at</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/a/</td>
+          <td>/ai/</td>
+          <td>/au/</td>
+          <td>/am/</td>
+          <td>/an/</td>
+          <td></td>
+          <td>/ap/</td>
+          <td>/at/</td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>阿</td>
+          <td>埃</td>
+          <td>拗</td>
+          <td>暗</td>
+          <td>眼</td>
+          <td></td>
+          <td>鸭</td>
+          <td>压</td>
+          <td></td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>ia</th>
+          <th></th>
+          <th>iau</th>
+          <th>iam</th>
+          <th></th>
+          <th>iang</th>
+          <th>iap</th>
+          <th></th>
+          <th>iak</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/ia/</td>
+          <td></td>
+          <td>/iau/</td>
+          <td>/iam/</td>
+          <td></td>
+          <td>/iaŋ/</td>
+          <td>/iap/</td>
+          <td></td>
+          <td>/iak/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>写</td>
+          <td></td>
+          <td>小</td>
+          <td>尖</td>
+          <td></td>
+          <td>惊</td>
+          <td>接</td>
+          <td></td>
+          <td>席</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>e</th>
+          <th>ei</th>
+          <th></th>
+          <th>em</th>
+          <th>en</th>
+          <th>ien</th>
+          <th>ep</th>
+          <th>et</th>
+          <th>iet</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/e/</td>
+          <td>/ɛi/</td>
+          <td></td>
+          <td>/ɛm/</td>
+          <td>/ɛn/</td>
+          <td>/iɛn/</td>
+          <td>/ɛp/</td>
+          <td>/ɛt/</td>
+          <td>/iɛt/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>矮</td>
+          <td>欧</td>
+          <td></td>
+          <td>森</td>
+          <td>恩</td>
+          <td>先</td>
+          <td>涩</td>
+          <td>色</td>
+          <td>雪</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>i</th>
+          <th>eai</th>
+          <th>eau</th>
+          <th>eam</th>
+          <th>ean</th>
+          <th>eang</th>
+          <th>eap</th>
+          <th>eat</th>
+          <th>eak</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/i/</td>
+          <td>/əi/</td>
+          <td>/əu/</td>
+          <td>/əm/</td>
+          <td>/ən/</td>
+          <td>/əŋ/</td>
+          <td>/əp/</td>
+          <td>/ət/</td>
+          <td>/ək/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>衣</td>
+          <td>位</td>
+          <td>有</td>
+          <td>音</td>
+          <td>因</td>
+          <td>莺</td>
+          <td>入</td>
+          <td>益</td>
+          <td>格</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>o</th>
+          <th>oi</th>
+          <th></th>
+          <th>on</th>
+          <th>ong</th>
+          <th>iong</th>
+          <th>ot</th>
+          <th>ok</th>
+          <th>iok</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/o/</td>
+          <td>/ɔi/</td>
+          <td></td>
+          <td>/ɔn/</td>
+          <td>/ɔŋ/</td>
+          <td>/iɔŋ/</td>
+          <td>/ɔt/</td>
+          <td>/ɔk/</td>
+          <td>/iɔk/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>奥</td>
+          <td>哀</td>
+          <td></td>
+          <td>安</td>
+          <td>当</td>
+          <td>想</td>
+          <td>说</td>
+          <td>恶</td>
+          <td>脚</td>
+        </tr>
+      </table>
+      <table>
+        <tr>
+          <th>韵母</th>
+          <th>u</th>
+          <th>ng</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>ung</th>
+          <th></th>
+          <th></th>
+          <th>uk</th>
+        </tr>
+        <tr>
+          <th>音标</th>
+          <td>/u/</td>
+          <td>/ŋ/</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>/uŋ/</td>
+          <td></td>
+          <td></td>
+          <td>/uk/</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>乌</td>
+          <td>五</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>东</td>
+          <td></td>
+          <td></td>
+          <td>屋</td>
+        </tr>
+      </table>
+      <h3>声调</h3>
+      <table>
+        <tr>
+          <th>声调</th>
+          <th>阴平</th>
+          <th>阳平</th>
+          <th>上声</th>
+          <th>去声</th>
+          <th>阴入</th>
+          <th>阳入</th>
+        </tr>
+        <tr>
+          <th>记号</th>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+        </tr>
+        <tr>
+          <th>调值</th>
+          <td>33</td>
+          <td>24</td>
+          <td>31</td>
+          <td>51</td>
+          <td>2</td>
+          <td>5</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>诗</td>
+          <td>时</td>
+          <td>使</td>
+          <td>世</td>
+          <td>识</td>
+          <td>食</td>
         </tr>
       </table>
     </paper>
@@ -264,8 +710,9 @@ export default {
       table {
         margin: 10px 0;
         text-align: center;
-        th, td {
-          width: 40px;
+        th,
+        td {
+          width: 44px;
         }
       }
     }

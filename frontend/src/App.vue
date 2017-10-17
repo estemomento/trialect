@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <tr-header/>
-    <router-view/>
+    <router-view class="page"/>
     <tr-footer/>
   </div>
 </template>
@@ -22,12 +22,21 @@ export default {
 <style lang="scss">
 * {
   margin: 0;
+  padding: 0;
   font-family: "Inziu Roboto SC";
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 #app {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  padding-top: 70px;
 }
 </style>

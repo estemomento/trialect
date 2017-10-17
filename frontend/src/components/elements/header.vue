@@ -23,6 +23,8 @@ export default {
 @import '../../assets/const.scss';
 
 header {
+  width: 100%;
+  position: fixed;
   background: $main-color;
   display: flex;
   justify-content: space-between; 
