@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/pages/index'
 import pinyin from '@/components/pages/pinyin'
-import download from '@/components/pages/download'
+import resource from '@/components/pages/resource'
 import about from '@/components/pages/about'
 import char from '@/components/pages/char'
 import notfound from '@/components/pages/notfound'
@@ -23,9 +23,9 @@ export default new Router({
       component: pinyin
     },
     {
-      path: '/download',
-      name: 'download',
-      component: download
+      path: '/resource',
+      name: 'resource',
+      component: resource
     },
     {
       path: '/about',

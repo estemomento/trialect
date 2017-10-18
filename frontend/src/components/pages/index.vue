@@ -9,7 +9,7 @@
     <search/>
     <div class="card-wrapper">
       <card :img="pinyinBg" title="拼音方案" info="展示茂名白话、电白黎话、电白涯话三种方言的拼音方案以及各声韵调发音" addr="/pinyin"></card>
-      <card :img="downloadBg" title="资源下载" info="提供茂名方言的历史资料、现有数据、专业研究等资料下载" addr="/download"></card>
+      <card :img="downloadBg" title="相关资源" info="提供茂名方言的历史资料、现有数据、专业研究等资料索引" addr="/resource"></card>
       <card :img="aboutBg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
     </div>
   </div>

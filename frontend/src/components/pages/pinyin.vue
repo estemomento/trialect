@@ -325,6 +325,52 @@
           <td></td>
         </tr>
       </table>
+      <h3>声调</h3>
+      <table>
+        <tr>
+          <th>声调</th>
+          <th>阴平</th>
+          <th>阳平</th>
+          <th>上声</th>
+          <th>阴去</th>
+          <th>阳去</th>
+          <th>阴入</th>
+          <th>舒入</th>
+          <th>阳入</th>
+        </tr>
+        <tr>
+          <th>记号</th>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td colspan="2">6</td>
+          <td>7</td>
+        </tr>
+        <tr>
+          <th>调值</th>
+          <td>33</td>
+          <td>22</td>
+          <td>31</td>
+          <td>44</td>
+          <td>43</td>
+          <td>5</td>
+          <td>55</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <th>例字</th>
+          <td>诗</td>
+          <td>时</td>
+          <td>死</td>
+          <td>世</td>
+          <td>是</td>
+          <td>失</td>
+          <td>接</td>
+          <td>实</td>
+        </tr>
+      </table>
       <hr>
       <h2>电白涯话（沙琅）</h2>
       <h3>声母</h3>

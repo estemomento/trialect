@@ -3,7 +3,7 @@
     <ul>
       <li><router-link to="/">主页</router-link></li>
       <li><router-link to="/pinyin">拼音</router-link></li>
-      <li><router-link to="/download">下载</router-link></li>
+      <li><router-link to="/resource">资源</router-link></li>
       <li><router-link to="/about">关于</router-link></li>
     </ul>
   </nav>
