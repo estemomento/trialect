@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="inner">
       <h1>{{ title }}</h1>
-      <hr>
+      <hr class="big-hr">
       <slot></slot>
     </div>
   </div>
@@ -38,6 +38,11 @@ export default {
       hr {
         margin: 10px 0;
         width: 100%;
+      }
+
+      .big-hr {
+        height: 4px;
+        background: #000;
       }
     }
 }

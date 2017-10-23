@@ -1,0 +1,14 @@
+[
+  {"no":1,"char":"一","mci":"影","mcm":"開","mcc":"三","mcr":"真A","mct":"入","mcf":"於悉","mcp":"it","py":"yī","mm":"jat1","xd":"it6","ul":"jeat5"},
+  {"no":2,"char":"丁","mci":"端","mcm":"開","mcc":"四","mcr":"青","mct":"平","mcf":"當經","mcp":"teng","py":"dīng","mm":"ding1","xd":"den1","ul":"dean1"},
+  {"no":3,"char":"七","mci":"清","mcm":"開","mcc":"三","mcr":"真A","mct":"入","mcf":"親吉","mcp":"tsit","py":"qī","mm":"cat1","xd":"cit6","ul":"ceat5"},
+  {"no":4,"char":"丈","mci":"澄","mcm":"開","mcc":"三","mcr":"陽","mct":"上","mcf":"直兩","mcp":"dyangx","py":"zhàng","mm":"ziang6","xd":"dong3","ul":"cong3"},
+  {"no":5,"char":"三","mci":"心","mcm":"開","mcc":"一","mcr":"談","mct":"平","mcf":"蘇甘","mcp":"sam","py":"sān","mm":"slaam1","xd":"sla1","ul":"slam1"},
+  {"no":6,"char":"上","mci":"常","mcm":"開","mcc":"三","mcr":"陽","mct":"去","mcf":"時亮","mcp":"jiangs","py":"shàng","mm":"siang6","xd":"zio4","ul":"song3"},
+  {"no":6,"char":"上","mci":"常","mcm":"開","mcc":"三","mcr":"陽","mct":"上","mcf":"時掌","mcp":"jiangx","py":"shǎng","mm":"siang5","xd":"zong3","ul":"song1"},
+  {"no":7,"char":"下","mci":"匣","mcm":"開","mcc":"二","mcr":"麻","mct":"去","mcf":"胡駕","mcp":"ghras","py":"xià","mm":"haa6","xd":"hia5 / e5","ul":"ha1"},
+  {"no":7,"char":"下","mci":"匣","mcm":"開","mcc":"二","mcr":"麻","mct":"上","mcf":"胡雅","mcp":"ghrax","py":"xià","mm":"haa5","xd":"e5","ul":"ha3"},
+  {"no":8,"char":"不","mci":"幫","mcm":"合","mcc":"三","mcr":"文","mct":"入","mcf":"分勿","mcp":"pyuut","py":"bù ","mm":"bat1","xd":"but6","ul":"beat5"},
+  {"no":9,"char":"丐","mci":"見","mcm":"開","mcc":"一","mcr":"泰","mct":"去","mcf":"古太","mcp":"kais","py":"gài ","mm":"koi3","xd":"gai4","ul":"goi4"},
+  {"no":10,"char":"丑","mci":"徹","mcm":"開","mcc":"三","mcr":"尤","mct":"上","mcf":"敕久","mcp":"thyoux","py":"chǒu ","mm":"cau2","xd":"ciau3","ul":"ceau3"}
+]
