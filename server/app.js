@@ -6,11 +6,12 @@ var cookieParser = require('cookie-parser')
 var bodyParser = require('body-parser')
 var mongo = require('mongodb').MongoClient
 var assert = require('assert')
+var fallback = require('express-history-api-fallback')
 
 var app = express()
 
-// uncomment after placing your favicon in /bin
-//app.use(favicon(path.join(__dirname, 'bin', 'favicon.ico')))
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -31,4 +32,5 @@ app.get('/data/:id', function (req, res, next) {
   })
 })
 
+app.use(fallback('index.html', {root: path.join(__dirname, 'public')}))
 module.exports = app
