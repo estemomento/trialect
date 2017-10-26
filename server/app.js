@@ -20,8 +20,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/data/:id', function (req, res, next) {
   var id = req.params.id
-  var url = 'mongodb://localhost:27017/trialect'
-  mongo.connect(url, function (err, db) {
+  var url = 'mongodb://trialect:tria1ectp%40ssw0rd@localhost:27017/trialect'
+  mongo.connect(url, {uri_decode_auth: true}, function (err, db) {
     assert.equal(null, err)
     console.log('Request: ' + id)
     db.collection('trialect').find({'char': id}).toArray(function (err, docs) {
