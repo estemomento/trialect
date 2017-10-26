@@ -1,6 +1,6 @@
 {
-  "name": "server",
-  "version": "0.0.0",
+  "name": "trialect-server",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,5 +15,9 @@
     "mongoose": "^4.12.3",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5"
-  }
+  },
+  "description": "An Express-built server handling Vue.js and JSON data",
+  "main": "bin/www",
+  "author": "Aleko Lau",
+  "license": "GPL-3.0"
 }
