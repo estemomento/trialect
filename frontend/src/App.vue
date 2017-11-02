@@ -41,7 +41,7 @@ export default {
 }
 
 #app {
-  font-family: "sourcesans", sans-serif;
+  font-family: "sourcesans", "Microsoft YaHei", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
