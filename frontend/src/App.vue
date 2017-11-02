@@ -22,12 +22,12 @@ export default {
 <style lang="scss">
 @font-face {
       font-family: 'sourcesans';
-      src: url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot');
+      src: url('http://at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot');
       /* IE9*/
-      src: url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.woff') format('woff'), /* chrome、firefox */
-      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.svg#思源黑体-普通') format('svg');
+      src: url('http://at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('http://at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.woff') format('woff'), /* chrome、firefox */
+      url('http://at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('http://at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.svg#思源黑体-普通') format('svg');
       /* iOS 4.1- */
 }
 
