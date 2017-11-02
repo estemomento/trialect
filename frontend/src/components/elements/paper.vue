@@ -31,8 +31,8 @@ export default {
       padding: 24px;
       border-radius: 5px;
 
-      h1, h2, h3 {
-        font-family: "Source Han Serif CN", serif;
+      h1 {
+        font-family: "KaiTi", serif;
       }
 
       hr {

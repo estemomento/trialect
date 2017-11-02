@@ -20,10 +20,20 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+      font-family: 'sourcesans';
+      src: url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot');
+      /* IE9*/
+      src: url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.woff') format('woff'), /* chrome、firefox */
+      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('//at.alicdn.com/t/webfont_gedgcbhu64a0dx6r.svg#思源黑体-普通') format('svg');
+      /* iOS 4.1- */
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-family: "Inziu Roboto SC";
 }
 
 ::-webkit-scrollbar {
@@ -31,7 +41,7 @@ export default {
 }
 
 #app {
-  font-family: sans-serif;
+  font-family: "sourcesans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

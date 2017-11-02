@@ -44,14 +44,13 @@ export default {
   }
 
   h3 {
-    font-family: "Source Han Serif CN", serif;
-    margin: 5px 10px;
+    margin: 10px;
   }
 
   p {
     display: inline-block;
     height: 50px;
-    margin: 10px;
+    margin: 5px 10px;
     font-size: 13px;
   }
 

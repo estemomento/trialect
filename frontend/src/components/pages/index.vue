@@ -71,7 +71,7 @@ export default {
 
       .big {
         font-size: 30px;
-        font-family: "Source Han Serif CN", serif;
+        font-family: "KaiTi", serif;
       }
 
       .small {

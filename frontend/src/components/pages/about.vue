@@ -7,7 +7,13 @@
           <span>{{ item.content }}</span>
         </p>
       </div>
-      <hr/>
+      <hr>
+      <div class="about-mid">
+        <p><strong>特别鸣谢：</strong></p>
+        <p>戴由武先生、戴汉辉先生、李健教授——提供方言语料</p>
+        <p>小翠——提供沙琅话读音</p>
+      </div>
+      <hr>
       <div class="about-bottom">
         <div class="left">
           <h2>联系方式</h2>
@@ -34,7 +40,7 @@
         <div class="right">
           <h2>赞助本站</h2>
           <p>欢迎赞助服务器钱，所有花销都会公布到GitHub上面：）</p>
-          <div></div>
+          <img src="http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/sponsor.png"></img>
         </div>
       </div>
     </paper>
@@ -95,10 +101,9 @@ export default {
           flex-direction: column;
           justify-content: space-between;
 
-          div {
+          img {
             height: 150px;
             width: 150px;
-            background: #000;
           }
         }
       }
