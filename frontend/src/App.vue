@@ -32,6 +32,7 @@ export default {
 }
 
 * {
+  font-family: "sourcesans", "Microsoft YaHei", sans-serif;  
   margin: 0;
   padding: 0;
 }
