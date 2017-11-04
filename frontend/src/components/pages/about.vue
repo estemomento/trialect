@@ -60,7 +60,7 @@
         <div class="right">
           <h2>赞助本站</h2>
           <p>欢迎赞助服务器钱，所有花销都会公布到GitHub上面：）</p>
-          <img src="http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/sponsor.png"></img>
+          <img :src="sponsor"></img>
         </div>
       </div>
     </paper>
@@ -77,6 +77,7 @@ export default {
   },
   data () {
     return {
+      sponsor: require('@/assets/sponsor.png'),
       intro: [
         { title: '为什么这个网站叫做Trialect呢？', content: '茂名地区有三大类方言：粤语、闽语、客家话。所以把代表「三」的前缀 tri- 和方言 dialect 组合起来，就有了Trialect这个名字。' },
         { title: 'Trialect网站提供什么信息和功能？', content: 'Trialect目前提供粤语（茂名市区）、闽语（电白霞洞）和客家话（电白沙琅）三种方言的拼音方案和常用字查询，另提供一些茂名方言研究资料索引。未来将加入更多地区的口音和在线发音功能。' },

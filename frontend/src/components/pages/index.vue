@@ -27,9 +27,9 @@ export default {
   },
   data () {
     return {
-      pinyinBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/pinyin.jpg',
-      downloadBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/download.jpg',
-      aboutBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/about.jpg'
+      pinyinBg: require('@/assets/pinyin.jpg'),
+      downloadBg: require('@/assets/download.jpg'),
+      aboutBg: require('@/assets/about.jpg')
     }
   }
 }
@@ -49,7 +49,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/quote-bg.jpg');
+    background: url('~@/assets/quote-bg.jpg');
     background-size: cover;
 
     .intro {
