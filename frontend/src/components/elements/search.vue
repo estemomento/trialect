@@ -49,6 +49,7 @@ export default {
       font-size: 24px;
       border: 0;
       border-radius: 5px;
+      outline: none;
       padding: 10px;
     }
 

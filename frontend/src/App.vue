@@ -22,7 +22,6 @@ export default {
 <style lang="scss">
 
 * {
-  font-family: "Microsoft YaHei", sans-serif;  
   margin: 0;
   padding: 0;
 }
@@ -32,7 +31,7 @@ export default {
 }
 
 #app {
-  font-family: "sourcesans", "Microsoft YaHei", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

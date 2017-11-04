@@ -6,12 +6,32 @@
           <strong>{{ item.title }}</strong>
           <span>{{ item.content }}</span>
         </p>
+        <strong>如在使用过程中发现有错误或者希望补充更多方言数据，欢迎各位通过下面的联系方式与站长联系，站长将尽快解决。</strong>
       </div>
       <hr>
       <div class="about-mid">
-        <p><strong>特别鸣谢：</strong></p>
-        <p>戴由武先生、戴汉辉先生、李健教授——提供方言语料</p>
-        <p>小翠——提供沙琅话读音</p>
+        <h2>资料提供</h2>
+        <div>
+          <h3>粤语：</h3>
+          <p v-for="(item, index) in yue" :key="index">
+            <strong>{{ item.place }}：</strong>
+            <span>{{ item.contrib }}</span>
+          </p>
+        </div>
+        <div>
+          <h3>闽语：</h3>
+          <p v-for="(item, index) in min" :key="index">
+            <strong>{{ item.place }}：</strong>
+            <span>{{ item.contrib }}</span>
+          </p>
+        </div>
+        <div>
+          <h3>客家话：</h3>
+          <p v-for="(item, index) in ke" :key="index">
+            <strong>{{ item.place }}：</strong>
+            <span>{{ item.contrib }}</span>
+          </p>
+        </div>
       </div>
       <hr>
       <div class="about-bottom">
@@ -58,9 +78,18 @@ export default {
   data () {
     return {
       intro: [
-        { title: '为什么这个网站叫做Trialect呢？', content: '茂名地区拥有三大类不同方言：粤语、闽语、客家话。所以把代表「三」的前缀 tri- 和方言 dialect 组合起来，就有了Trialect这个名字。' },
-        { title: 'Trialect网站提供什么信息和功能？', content: 'Trialect目前提供茂名白话（市区口音）、电白黎话（霞洞口音）和电白涯话（沙琅口音）三种方言的拼音方案和常用字语音查询，另外提供一些常用的茂名方言研究资料。未来网站将加入更多地区的口音和在线发音功能。' },
-        { title: 'Trialect的宗旨是什么？', content: '站长有感于茂名青少年方言能力急剧衰退、受普通话极大影响等现象，希望为茂名方言建立一个尽量详细的档案，发扬和传承茂名方言文化。Trialect是一块试验田，也是站长寄托的希望。' }
+        { title: '为什么这个网站叫做Trialect呢？', content: '茂名地区有三大类方言：粤语、闽语、客家话。所以把代表「三」的前缀 tri- 和方言 dialect 组合起来，就有了Trialect这个名字。' },
+        { title: 'Trialect网站提供什么信息和功能？', content: 'Trialect目前提供粤语（茂名市区）、闽语（电白霞洞）和客家话（电白沙琅）三种方言的拼音方案和常用字查询，另提供一些茂名方言研究资料索引。未来将加入更多地区的口音和在线发音功能。' },
+        { title: 'Trialect的宗旨是什么？', content: '站长有感茂名青少年方言能力极大衰退，希望为茂名方言建立数字化的档案，发扬和传承茂名方言文化。本站秉持非营利原则，一切收入都会用作网站相关用途。' }
+      ],
+      yue: [
+        { place: '茂名市区', contrib: '《茂名市志》（茂名市地方志编纂委员会）、Aleko Lau' }
+      ],
+      min: [
+        { place: '电白霞洞', contrib: '《电白方言志》（戴由武、戴汉辉）' }
+      ],
+      ke: [
+        { place: '电白沙琅', contrib: '《电白方言志》（戴由武、戴汉辉）、《粤西客家方言调查报告》（李如龙）、小翠' }
       ]
     }
   }
@@ -78,6 +107,13 @@ export default {
   .wrapper {
     .inner {
       .about-top {
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .about-mid {
         height: 200px;
         display: flex;
         flex-direction: column;
@@ -96,7 +132,7 @@ export default {
         .left,
         .right {
           width: 320px;
-          height: 250px;
+          height: 220px;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
