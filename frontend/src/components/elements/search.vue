@@ -42,6 +42,7 @@ export default {
     border: 0;
     border-radius: 5px;
     background: #fff;
+    display: flex;
 
     input[type=search] {
       width: 400px;

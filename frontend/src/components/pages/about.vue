@@ -60,7 +60,7 @@
         <div class="right">
           <h2>赞助本站</h2>
           <p>欢迎赞助服务器钱，所有花销都会公布到GitHub上面：）</p>
-          <img src="http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/sponsor.png"></img>
+          <img src="http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/sponsor.png"></img>
         </div>
       </div>
     </paper>

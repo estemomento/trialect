@@ -8,8 +8,8 @@
     </div>
     <search/>
     <div class="card-wrapper">
-      <card :img="pinyinBg" title="拼音方案" info="展示白话、黎话、涯话三种方言的拼音方案以及各声韵调发音" addr="/pinyin"></card>
-      <card :img="downloadBg" title="相关资源" info="提供茂名方言的历史资料、现有数据、专业研究等资料索引" addr="/resource"></card>
+      <card :img="pinyinBg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
+      <card :img="downloadBg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
       <card :img="aboutBg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
     </div>
   </div>
@@ -27,9 +27,9 @@ export default {
   },
   data () {
     return {
-      pinyinBg: 'http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/pinyin.jpg',
-      downloadBg: 'http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/download.jpg',
-      aboutBg: 'http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/about.jpg'
+      pinyinBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/pinyin.jpg',
+      downloadBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/download.jpg',
+      aboutBg: 'http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/about.jpg'
     }
   }
 }
@@ -49,7 +49,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('http://trialect-oss.oss-cn-shenzhen.aliyuncs.com/quote-bg.jpg');
+    background: url('http://trialect-oss.oss-cn-shenzhen-internal.aliyuncs.com/quote-bg.jpg');
     background-size: cover;
 
     .intro {

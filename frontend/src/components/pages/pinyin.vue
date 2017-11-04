@@ -5,7 +5,7 @@
       <h3>声母</h3>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>b</th>
           <th>p</th>
           <th>m</th>
@@ -43,7 +43,7 @@
       </table>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>g</th>
           <th>k</th>
           <th>gw</th>
@@ -94,7 +94,7 @@
       <h3>声母</h3>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>b</th>
           <th>p</th>
           <th>m</th>
@@ -132,7 +132,7 @@
       </table>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>g</th>
           <th>k</th>
           <th>ng</th>
@@ -168,7 +168,7 @@
       <h3>韵母</h3>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th></th>
           <th>a</th>
           <th>o</th>
@@ -221,7 +221,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>i</th>
           <th>ia</th>
           <th>io</th>
@@ -274,7 +274,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>u</th>
           <th>ua</th>
           <th></th>
@@ -327,7 +327,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <td></td>
           <th>ap</th>
           <th>ep</th>
@@ -359,7 +359,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <td></td>
           <th>iap</th>
           <th>ip</th>
@@ -391,7 +391,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <td></td>
           <th>uap</th>
           <th></th>
@@ -424,7 +424,7 @@
       <h3>声调</h3>
       <table>
         <tr>
-          <th>声调</th>
+          <th></th>
           <th>阴平</th>
           <th>阳平</th>
           <th>上声</th>
@@ -472,7 +472,7 @@
       <h3>声母</h3>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>b</th>
           <th>p</th>
           <th>m</th>
@@ -510,7 +510,7 @@
       </table>
       <table>
         <tr>
-          <th>声母</th>
+          <th></th>
           <th>g</th>
           <th>k</th>
           <th>gw</th>
@@ -558,7 +558,7 @@
       <h3>韵母</h3>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>a</th>
           <th>ai</th>
           <th>au</th>
@@ -596,7 +596,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>ia</th>
           <th></th>
           <th>iau</th>
@@ -634,7 +634,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>e</th>
           <th>ei</th>
           <th></th>
@@ -672,7 +672,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>i</th>
           <th>eai</th>
           <th>eau</th>
@@ -710,7 +710,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>o</th>
           <th>oi</th>
           <th></th>
@@ -748,7 +748,7 @@
       </table>
       <table>
         <tr>
-          <th>韵母</th>
+          <th></th>
           <th>u</th>
           <th>ng</th>
           <th></th>
@@ -787,7 +787,7 @@
       <h3>声调</h3>
       <table>
         <tr>
-          <th>声调</th>
+          <th></th>
           <th>阴平</th>
           <th>阳平</th>
           <th>上声</th>
@@ -848,9 +848,11 @@ export default {
 
   .wrapper {
     .inner {
-
+      h3 {
+        margin: 10px 0 0 0 
+      }
       table {
-        margin: 10px 0;
+        margin: 5px 0;
         text-align: center;
         th,
         td {
