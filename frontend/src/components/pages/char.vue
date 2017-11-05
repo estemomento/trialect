@@ -2,43 +2,22 @@
   <div class="char">
     <search/>
     <paper :title="$route.params.ch">
-      <div class="char1">
+      <div class="character" v-for="(dialect, index) in dialects" :key="index">
+        <hr v-if="index > 0">
         <div class="top-info">
           <div class="basic-info">
-            <h2 v-if="info2.mcm">读音一</h2>
+            <h2>读音{{ index + 1 }}</h2>
             <h3>基本资料</h3>
             <p>
-              <strong>中古：</strong>{{ info1.mci }}母{{ info1.mcm }}口{{ info1.mcc }}等{{ info1.mcr }}韵{{ info1.mct }}声 - [{{ info1.mcp }}]
+              <strong>中古：</strong>{{ info[index].mci }}母{{ info[index].mcm }}口{{ info[index].mcc }}等{{ info[index].mcr }}韵{{ info[index].mct }}声 - [{{ info[index].mcp }}]
             </p>
             <p>
-              <strong>反切：</strong>{{ info1.mcf }}切</p>
+              <strong>反切：</strong>{{ info[index].mcf }}切</p>
             <p>
-              <strong>汉语拼音：</strong>{{ info1.py }}</p>
+              <strong>汉语拼音：</strong>{{ info[index].py }}</p>
           </div>
         </div>
-        <div v-for="(item, index) in dialects1" :key="index">
-          <hr>
-          <h3>{{ item.name }}</h3>
-          <p>
-            <strong>拼音：</strong>{{ item.py }}</p>
-        </div>
-      </div>
-      <div class="char2" v-if="info2.mcm">
-        <hr class="big-hr">
-        <div class="top-info">
-          <div class="basic-info">
-            <h2>读音二</h2>
-            <h3>基本资料</h3>
-            <p>
-              <strong>中古：</strong>{{ info2.mci }}母{{ info2.mcm }}口{{ info2.mcc }}等{{ info2.mcr }}韵{{ info2.mct }}声 - [{{ info2.mcp }}]
-            </p>
-            <p>
-              <strong>反切：</strong>{{ info2.mcf }}切</p>
-            <p>
-              <strong>汉语拼音：</strong>{{ info2.py }}</p>
-          </div>
-        </div>
-        <div v-for="(item, index) in dialects2" :key="index">
+        <div v-for="(item, index) in dialect" :key="index">
           <hr>
           <h3>{{ item.name }}</h3>
           <p>
@@ -67,6 +46,23 @@ export default {
     this.getchar()
   },
   methods: {
+    handle (response) {
+      this.info = response
+      this.dialects = []
+      this.info.forEach(e => {
+        var d = []
+        if (e.mm !== '') {
+          d.push({ name: '粤语（茂名市区）', py: e.mm })
+        }
+        if (e.xd !== '') {
+          d.push({ name: '雷话（电白霞洞）', py: e.xd })
+        }
+        if (e.ul !== '') {
+          d.push({ name: '𠊎话（电白沙琅）', py: e.ul })
+        }
+        this.dialects.push(d)
+      }, this)
+    },
     getchar () {
       var addr = '/data/' + this.$route.params.ch
       var request = new XMLHttpRequest()
@@ -74,33 +70,7 @@ export default {
       request.open('GET', addr)
       request.onload = () => {
         if (request.status === 200) {
-          this.info1 = request.response[0]
-          this.dialects1 = []
-          if (this.info1.mm !== '') {
-            this.dialects1.push({ name: '白话（茂名市区）', py: this.info1.mm })
-          }
-          if (this.info1.xd !== '') {
-            this.dialects1.push({ name: '黎话（电白霞洞）', py: this.info1.xd })
-          }
-          if (this.info1.ul !== '') {
-            this.dialects1.push({ name: '涯话（电白沙琅）', py: this.info1.ul })
-          }
-          if (request.response[1]) {
-            this.info2 = request.response[1]
-            this.dialects2 = []
-            if (this.info1.mm !== '') {
-              this.dialects2.push({ name: '白话（茂名市区）', py: this.info2.mm })
-            }
-            if (this.info1.xd !== '') {
-              this.dialects2.push({ name: '黎话（电白霞洞）', py: this.info2.xd })
-            }
-            if (this.info1.ul !== '') {
-              this.dialects2.push({ name: '涯话（电白沙琅）', py: this.info2.ul })
-            }
-          } else {
-            this.info2 = {}
-            this.dialects2 = []
-          }
+          this.handle(request.response)
         }
       }
       request.send()
@@ -108,10 +78,8 @@ export default {
   },
   data () {
     return {
-      info1: {},
-      dialects1: [],
-      info2: {},
-      dialects2: []
+      info: [],
+      dialects: []
     }
   }
 }

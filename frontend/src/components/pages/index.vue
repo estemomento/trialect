@@ -7,6 +7,7 @@
       </div>
     </div>
     <search/>
+    <stat/>
     <div class="card-wrapper">
       <card :img="pinyinBg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
       <card :img="downloadBg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
@@ -17,12 +18,14 @@
 
 <script>
 import card from '@/components/elements/card'
+import stat from '@/components/elements/stat'
 import search from '@/components/elements/search'
 
 export default {
   name: 'index',
   components: {
     card,
+    stat,
     search
   },
   data () {
