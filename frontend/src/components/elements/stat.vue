@@ -1,8 +1,8 @@
 <template>
   <div class="stat-wrapper">
     <div class="stat">
-      <p>收录<strong>{{ info.charNum }}</strong>个汉字的<strong>{{ info.proNum }}</strong>种读法，其中：
-      粤语：<strong>{{ info.mmNum }}</strong>种，雷话：<strong>{{ info.xdNum }}</strong>种，𠊎话：<strong>{{ info.ulNum }}</strong>种</p>
+      <p>目前收录：<strong>{{ info.charNum }}</strong>汉字、<strong>{{ info.proNum }}</strong>音韵、<strong>{{ info.mmNum + info.xdNum + info.ulNum }}</strong>方言读音，其中
+      粤语<strong>{{ info.mmNum }}</strong>个，闽语<strong>{{ info.xdNum }}</strong>个，客家话<strong>{{ info.ulNum }}</strong>个</p>
     </div>
   </div>
 </template>
