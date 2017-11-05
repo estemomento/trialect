@@ -2,26 +2,26 @@
   <div class="char">
     <search/>
     <paper :title="$route.params.ch">
-      <div class="character" v-for="(dialect, index) in dialects" :key="index">
+      <div class="character" v-for="(pron, index) in info" :key="index">
         <hr v-if="index > 0">
         <div class="top-info">
           <div class="basic-info">
             <h2>读音{{ index + 1 }}</h2>
             <h3>基本资料</h3>
             <p>
-              <strong>中古：</strong>{{ info[index].mci }}母{{ info[index].mcm }}口{{ info[index].mcc }}等{{ info[index].mcr }}韵{{ info[index].mct }}声 - [{{ info[index].mcp }}]
+              <strong>中古：</strong>{{ pro.middleChinese.init }}母{{ pro.middleChinese.mouth }}口{{ pro.middleChinese.level }}等{{ pro.middleChinese.rhyme }}韵{{ pro.middleChinese.tone }}声 - [{{ pro.middleChinese.trans }}]
             </p>
             <p>
-              <strong>反切：</strong>{{ info[index].mcf }}切</p>
+              <strong>反切：</strong>{{ pro.middleChinese.fanqie }}切</p>
             <p>
-              <strong>汉语拼音：</strong>{{ info[index].py }}</p>
+              <strong>汉语拼音：</strong>{{ pro.pinyin }}</p>
           </div>
         </div>
-        <div v-for="(item, index) in dialect" :key="index">
+        <div v-for="(dialect, index) in pro.dialects" :key="index">
           <hr>
-          <h3>{{ item.name }}</h3>
+          <h3>{{ dialect.name }}</h3>
           <p>
-            <strong>拼音：</strong>{{ item.py }}</p>
+            <strong>拼音：</strong>{{ dialect.py }}</p>
         </div>
       </div>
     </paper>
@@ -46,23 +46,6 @@ export default {
     this.getchar()
   },
   methods: {
-    handle (response) {
-      this.info = response
-      this.dialects = []
-      this.info.forEach(e => {
-        var d = []
-        if (e.mm !== '') {
-          d.push({ name: '粤语（茂名市区）', py: e.mm })
-        }
-        if (e.xd !== '') {
-          d.push({ name: '雷话（电白霞洞）', py: e.xd })
-        }
-        if (e.ul !== '') {
-          d.push({ name: '𠊎话（电白沙琅）', py: e.ul })
-        }
-        this.dialects.push(d)
-      }, this)
-    },
     getchar () {
       var addr = '/data/' + this.$route.params.ch
       var request = new XMLHttpRequest()
@@ -70,7 +53,7 @@ export default {
       request.open('GET', addr)
       request.onload = () => {
         if (request.status === 200) {
-          this.handle(request.response)
+          this.info = request.response
         }
       }
       request.send()
@@ -78,8 +61,7 @@ export default {
   },
   data () {
     return {
-      info: [],
-      dialects: []
+      info: []
     }
   }
 }
