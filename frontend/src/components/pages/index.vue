@@ -30,9 +30,9 @@ export default {
   },
   data () {
     return {
-      pinyinBg: require('@/assets/pinyin.jpg'),
-      downloadBg: require('@/assets/download.jpg'),
-      aboutBg: require('@/assets/about.jpg')
+      pinyinBg: 'http://alekolau.cn/trialect/pinyin.jpg',
+      downloadBg: 'http://alekolau.cn/trialect/download.jpg',
+      aboutBg: 'http://alekolau.cn/trialect/about.jpg'
     }
   }
 }
@@ -52,7 +52,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('~@/assets/quote-bg.jpg');
+    background: url('http://alekolau.cn/trialect/quote-bg.jpg');
     background-size: cover;
 
     .intro {
