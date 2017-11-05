@@ -2,7 +2,7 @@
   <div class="char">
     <search/>
     <paper :title="$route.params.ch">
-      <div class="character" v-for="(pron, index) in info" :key="index">
+      <div class="character" v-for="(pro, index) in info" :key="index">
         <hr v-if="index > 0">
         <div class="top-info">
           <div class="basic-info">
@@ -17,7 +17,7 @@
               <strong>汉语拼音：</strong>{{ pro.pinyin }}</p>
           </div>
         </div>
-        <div v-for="(dialect, index) in pro.dialects" :key="index">
+        <div v-for="(dialect, index) in pro.dialects" v-if="dialect.py" :key="index">
           <hr>
           <h3>{{ dialect.name }}</h3>
           <p>

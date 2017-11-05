@@ -24,9 +24,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/stat/', async function(req, res, next) {
   var charNum = (await trialect.distinct('char')).length
   var proNum = await trialect.count()
-  var mmNum = await trialect.find({'dialects.0.py': {$ne: ''}}).count()
-  var xdNum = await trialect.find({'dialects.1.py': {$ne: ''}}).count()
-  var ulNum = await trialect.find({'dialects.2.py': {$ne: ''}}).count()
+  var mmNum = await trialect.count({'dialects.0.py': {$ne: ''}})
+  var xdNum = await trialect.count({'dialects.1.py': {$ne: ''}})
+  var ulNum = await trialect.count({'dialects.2.py': {$ne: ''}})
   res.send({charNum, proNum, mmNum, xdNum, ulNum})
 })
 
