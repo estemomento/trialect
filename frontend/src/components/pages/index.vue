@@ -39,6 +39,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (max-width:767px) {
+  .intro-wrapper {
+    height: 200px;
+    .intro {
+      width: 200px;
+      height: 100px;
+    }
+  }
+  .card-wrapper {
+    flex-direction: column;
+    width: 100%;
+    height: 800px;
+  }
+}
+
+@media (min-width:768px) {
+  .intro-wrapper {
+    height: 300px;
+    .intro {
+      width: 400px;
+      height: 80px;
+    }
+  }
+  .card-wrapper {
+    width: 700px;
+    height: 300px;
+  }
+}
+
 .index {
   min-height: calc(100vh - 110px);
   display: flex;
@@ -48,7 +77,6 @@ export default {
 
   .intro-wrapper {
     width: 100%;
-    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,8 +86,6 @@ export default {
     .intro {
       transition: 0.2s;
       background: #fff;
-      width: 400px;
-      height: 80px;
       box-shadow: 2px 2px 5px #666;
       padding: 10px;
       display: flex;
@@ -85,8 +111,6 @@ export default {
   }
 
   .card-wrapper {
-    height: 300px;
-    width: 700px;
     display: flex;
     justify-content: space-around;
     align-items: center;

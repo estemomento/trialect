@@ -4,7 +4,7 @@
       <strong>点击名字可展开/收起</strong>
       <hr>
       <div class="title" @click="maoming = !maoming"><h2>粤语（茂名市区）</h2></div>
-      <div v-show="maoming">
+      <div class="table-wrapper" v-show="maoming">
         <h3>声母</h3>
         <table>
           <tr>
@@ -154,7 +154,7 @@
       </div>
       <hr>
       <div class="title" @click="xiadong = !xiadong"><h2>雷话（电白霞洞）</h2></div>
-      <div v-show="xiadong">
+      <div class="table-wrapper" v-show="xiadong">
         <h3>声母</h3>
         <table>
           <tr>
@@ -291,7 +291,7 @@
       </div>
       <hr>
       <div class="title" @click="shalang = !shalang"><h2>𠊎话（电白沙琅）</h2></div>
-      <div v-show="shalang">
+      <div class="table-wrapper" v-show="shalang">
         <h3>声母</h3>
         <table>
           <tr>
@@ -458,15 +458,23 @@ export default {
 
   .wrapper {
     .inner {
+      .table-wrapper {
+        width: 100%;
+        overflow: auto;
+      }
       h3 {
         margin: 10px 0 0 0 
       }
       table {
+        width: 100px;
+        white-space: nowrap;
+        table-layout: fixed;
         margin: 5px 0;
         text-align: center;
         th,
         td {
-          width: 44px;
+          white-space: nowrap;
+          width: 36px;
         }
       }
     }

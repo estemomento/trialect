@@ -20,6 +20,17 @@ export default {
 </script>
 
 <style lang="scss">
+@media (max-width:767px) {
+  .page {
+    padding-top: 100px;
+  }
+}
+
+@media (min-width:768px) {
+  .page {
+    padding-top: 70px;
+  }
+}
 
 * {
   margin: 0;
@@ -36,7 +47,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.page {
-  padding-top: 70px;
-}
+
 </style>

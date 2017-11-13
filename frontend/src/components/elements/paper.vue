@@ -18,32 +18,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/const.scss';
+
 .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+
+  @media (max-width: 767px) {
+    padding: 20px 8px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 50px 0;
+  }
+
+  .inner {
+    background: #fff;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    max-width: 660px;
+    box-shadow: 2px 2px 5px #666;
+    padding: 24px;
+    border-radius: 5px;
+    box-sizing: border-box;
 
-    .inner {
-      margin: 50px 0;
-      background: #fff;
-      width: 700px;
-      box-shadow: 2px 2px 5px #666;
-      padding: 24px;
-      border-radius: 5px;
-
-      h1 {
-        font-family: "KaiTi", serif;
-      }
-
-      hr {
-        margin: 10px 0;
-        width: 100%;
-      }
-
-      .big-hr {
-        height: 4px;
-        background: #000;
-      }
+    h1 {
+      font-family: "KaiTi", serif;
     }
+
+    hr {
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    .big-hr {
+      height: 4px;
+      background: #000;
+    }
+  }
 }
 </style>
