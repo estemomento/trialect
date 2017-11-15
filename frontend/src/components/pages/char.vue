@@ -1,27 +1,26 @@
 <template>
   <div class="char">
     <search/>
-    <paper :title="$route.params.ch">
+    <paper :title="$route.params.ch" dense>
       <div class="character" v-for="(pro, index) in info" :key="index">
         <hr v-if="index > 0">
         <div class="top-info">
           <div class="basic-info">
-            <h2>读音{{ index + 1 }}</h2>
-            <h3>基本资料</h3>
+            <h3>读音{{ index + 1 }}</h3>
+            <h4>基本资料</h4>
             <p>
-              <strong>中古：</strong>{{ pro.middleChinese.init }}母{{ pro.middleChinese.mouth }}口{{ pro.middleChinese.level }}等{{ pro.middleChinese.rhyme }}韵{{ pro.middleChinese.tone }}声 - [{{ pro.middleChinese.trans }}]
+              中古：{{ pro.middleChinese.init }}母{{ pro.middleChinese.mouth }}口{{ pro.middleChinese.level }}等{{ pro.middleChinese.rhyme }}韵{{ pro.middleChinese.tone }}声 - [{{ pro.middleChinese.trans }}]
             </p>
             <p>
-              <strong>反切：</strong>{{ pro.middleChinese.fanqie }}切</p>
+              反切：{{ pro.middleChinese.fanqie }}切</p>
             <p>
-              <strong>汉语拼音：</strong>{{ pro.pinyin }}</p>
+              汉语拼音：{{ pro.pinyin }}</p>
           </div>
         </div>
         <div v-for="(dialect, index) in pro.dialects" v-if="dialect.py" :key="index">
-          <hr>
-          <h3>{{ dialect.name }}</h3>
+          <h4>{{ dialect.name }}</h4>
           <p>
-            <strong>拼音：</strong>{{ dialect.py }}</p>
+            拼音：<strong>{{ dialect.py }}</strong></p>
         </div>
       </div>
     </paper>
@@ -74,5 +73,20 @@ export default {
   flex-direction: column;
   align-items: center;
   background: #ddd;
+
+  .character{
+
+    p {
+      font-size: 14px;
+
+      strong {
+        color: #000;
+        font-size: 18px;
+      }
+    }
+    .top-info p{
+      margin: 0;
+    }
+  }
 }
 </style>

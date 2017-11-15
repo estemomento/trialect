@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/components/pages/index'
+import intro from '@/components/pages/intro'
 import pinyin from '@/components/pages/pinyin'
 import resource from '@/components/pages/resource'
 import about from '@/components/pages/about'
@@ -16,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'index',
       component: index
+    },
+    {
+      path: '/intro',
+      name: 'intro',
+      component: intro
     },
     {
       path: '/pinyin',

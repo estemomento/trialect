@@ -153,7 +153,7 @@
         </table>
       </div>
       <hr>
-      <div class="title" @click="xiadong = !xiadong"><h2>雷话（电白霞洞）</h2></div>
+      <div class="title" @click="xiadong = !xiadong"><h2>闽语（电白霞洞）</h2></div>
       <div class="table-wrapper" v-show="xiadong">
         <h3>声母</h3>
         <table>
@@ -290,7 +290,7 @@
         </table>
       </div>
       <hr>
-      <div class="title" @click="shalang = !shalang"><h2>𠊎话（电白沙琅）</h2></div>
+      <div class="title" @click="shalang = !shalang"><h2>客语（电白沙琅）</h2></div>
       <div class="table-wrapper" v-show="shalang">
         <h3>声母</h3>
         <table>
@@ -462,9 +462,6 @@ export default {
         width: 100%;
         overflow: auto;
       }
-      h3 {
-        margin: 10px 0 0 0 
-      }
       table {
         width: 100px;
         white-space: nowrap;
@@ -475,6 +472,11 @@ export default {
         td {
           white-space: nowrap;
           width: 36px;
+
+          @media (max-width:767px) {
+            font-size: 14px;
+            width: 30px;
+          }
         }
       }
     }

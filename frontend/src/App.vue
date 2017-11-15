@@ -21,6 +21,18 @@ export default {
 
 <style lang="scss">
 @media (max-width:767px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  h4, p {
+    font-size: 14px;
+  }
   .page {
     padding-top: 100px;
   }

@@ -2,6 +2,7 @@
   <nav>
     <ul>
       <li><router-link to="/">主页</router-link></li>
+      <li><router-link to="/intro">简介</router-link></li>
       <li><router-link to="/pinyin">拼音</router-link></li>
       <li><router-link to="/resource">资料</router-link></li>
       <li><router-link to="/about">关于</router-link></li>
@@ -31,12 +32,11 @@ a {
   transition: 200ms;
   display: inline-flex;
   align-items: center;
-  color: #bababa;
+  color: #aaa;
   height: 40px;
   font-size: 16px;
-  text-shadow: 1px 2px #121212 ;
   text-decoration: none;
-  padding: 0 15px; 
+  padding: 0 12px; 
 }
 
 a:hover {

@@ -1,7 +1,7 @@
 <template>
   <div class="resource">
     <paper title="资料">
-      <strong>本站仅提供索引，不提供下载链接，可向版权方索取或自行搜索下载。请尊重版权所有者权益。</strong>
+      <p><strong>本站仅提供索引，不提供下载链接，可向版权方索取或自行搜索下载。请尊重版权所有者权益。</strong></p>
       <hr>
       <div class="list">
         <h2>书籍</h2>
@@ -101,13 +101,6 @@ export default {
 
   .wrapper {
     .inner {
-      
-      .list {
-        height: 1800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-      }
     }
   }
 }

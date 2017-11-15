@@ -1,5 +1,5 @@
 <template>
-  <div class="wrapper">
+  <div class="wrapper" :class="{ dense }">
     <div class="inner">
       <h1>{{ title }}</h1>
       <hr class="big-hr">
@@ -12,13 +12,14 @@
 export default {
   name: 'paper',
   props: {
-    title: String
+    title: String,
+    dense: Boolean
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/const.scss';
+@import "../../assets/const.scss";
 
 .wrapper {
   width: 100%;
@@ -34,17 +35,30 @@ export default {
     padding: 50px 0;
   }
 
+  &.dense {
+    padding-top: 0;
+  }
+
   .inner {
     background: #fff;
     width: 100%;
     max-width: 660px;
     box-shadow: 2px 2px 5px #666;
-    padding: 24px;
+    padding: 36px;
     border-radius: 5px;
     box-sizing: border-box;
 
     h1 {
-      font-family: "KaiTi", serif;
+      margin: 18px 0;
+      font-family:  serif;
+    }
+
+    h2 {
+      margin: 14px 0;
+    }
+
+    h3, h4 {
+      margin: 10px 0;
     }
 
     hr {
@@ -53,8 +67,14 @@ export default {
     }
 
     .big-hr {
-      height: 4px;
-      background: #000;
+      height: 0;
+      border: 0;
+      border-top: 2px solid black;
+    }
+
+    p {
+      margin: 10px 0;
+      color: #444;
     }
   }
 }

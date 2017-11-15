@@ -26,8 +26,8 @@ export default {
 
 .card {
   background: #fff;
-  height: 250px;
-  width: 200px;
+  height: 260px;
+  width: 220px;
   box-shadow: 2px 2px 5px #666;
   border-radius: 5px;
   display: flex;
@@ -35,7 +35,7 @@ export default {
 
   div {
     width: 100%;
-    height: 100px;
+    height: 120px;
     overflow: hidden;
 
     img {
@@ -50,7 +50,7 @@ export default {
   p {
     display: inline-block;
     height: 50px;
-    margin: 5px 10px;
+    margin: 0 10px;
     font-size: 13px;
   }
 

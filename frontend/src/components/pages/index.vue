@@ -9,6 +9,7 @@
     <search/>
     <stat/>
     <div class="card-wrapper">
+      <card :img="introBg" title="方言概况" info="简要介绍茂名地区方言现状以及分布" addr="/intro"></card>
       <card :img="pinyinBg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
       <card :img="downloadBg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
       <card :img="aboutBg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
@@ -30,6 +31,7 @@ export default {
   },
   data () {
     return {
+      introBg: 'http://alekolau.cn/trialect/intro.png',
       pinyinBg: 'http://alekolau.cn/trialect/pinyin.jpg',
       downloadBg: 'http://alekolau.cn/trialect/download.jpg',
       aboutBg: 'http://alekolau.cn/trialect/about.jpg'
@@ -39,35 +41,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width:767px) {
-  .intro-wrapper {
-    height: 200px;
-    .intro {
-      width: 200px;
-      height: 100px;
-    }
-  }
-  .card-wrapper {
-    flex-direction: column;
-    width: 100%;
-    height: 800px;
-  }
-}
-
-@media (min-width:768px) {
-  .intro-wrapper {
-    height: 300px;
-    .intro {
-      width: 400px;
-      height: 80px;
-    }
-  }
-  .card-wrapper {
-    width: 700px;
-    height: 300px;
-  }
-}
-
 .index {
   min-height: calc(100vh - 110px);
   display: flex;
@@ -82,25 +55,34 @@ export default {
     align-items: center;
     background: url('http://alekolau.cn/trialect/quote-bg.jpg');
     background-size: cover;
+    @media (max-width:767px) {
+      height: 200px;
+    }
+    @media (min-width:768px) {
+      height: 300px;
+    }
 
     .intro {
-      transition: 0.2s;
       background: #fff;
       box-shadow: 2px 2px 5px #666;
       padding: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      border-radius: 5px;
-
-      &:hover {
-        transition: 0.2s;
-        box-shadow: 5px 5px 10px #333;
+      opacity: 0.8;
+      @media (max-width:767px) {
+        width: 200px;
+        height: 100px;
       }
+      @media (min-width:768px) {
+        width: 400px;
+        height: 80px;
+      }
+    
 
       .big {
         font-size: 30px;
-        font-family: "KaiTi", serif;
+        font-family: serif;
       }
 
       .small {
@@ -114,6 +96,17 @@ export default {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 300px;
+    @media (max-width:1000px) {
+      width: 500px;
+      height: 600px;
+    }
+    @media (max-width:500px) {
+      width: 250px;
+      height: 1200px;
+    }
   }
 }
 </style>

@@ -29,24 +29,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width:767px) {
-  input[type=search] {
-    font-size: 18px;
-  }
-  button {
-    width: 72px;
-    font-size: 18px;
-  }
-}
-
 @media (min-width:768px) {
   input[type=search] {
-    width: 400px;
-    font-size: 24px;
-  }
-  button {
-    width: 100px;
-    font-size: 24px;
+    width: 350px;
+    font-size: 18px;
   }
 }
 
@@ -58,7 +44,9 @@ export default {
   align-items: center;
 
   .search {
-    height: 60px;
+    width: 90%;
+    max-width: 400px;
+    height: 50px;
     box-shadow: 2px 2px 5px #666;
     border: 0;
     border-radius: 5px;
@@ -66,7 +54,10 @@ export default {
     display: flex;
 
     input[type=search] {
-      height: 60px;
+
+      width: 80%;
+      font-size: 16px;
+      height: 50px;
       border: 0;
       border-radius: 5px;
       outline: none;
@@ -74,10 +65,18 @@ export default {
     }
 
     button {
-      height: 60px;
+      background: #ddd;
+      width: 20%;
+      min-width: 60px;
+      font-size: 16px;
+      height: 50px;
       border: 0;
       border-radius: 5px;
       padding: 10px;
+
+      &:hover {
+        background-color: #ccc;
+      }
     }
   }
 }
