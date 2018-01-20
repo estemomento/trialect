@@ -1,31 +1,22 @@
 <template>
   <div class="stat-wrapper">
     <div class="stat">
-      <p>目前收录：<strong>{{ info.charNum }}</strong>汉字、<strong>{{ info.proNum }}</strong>音韵、<strong>{{ info.mmNum + info.xdNum + info.ulNum }}</strong>方言读音</p>
+      <p>收录：<strong>{{ info.charNum }}</strong>字、<strong>{{ info.proNum }}</strong>韵、<strong>{{ info.mmNum + info.xdNum + info.ulNum }}</strong>方言读音</p>
       <p>其中粤语<strong>{{ info.mmNum }}</strong>个，闽语<strong>{{ info.xdNum }}</strong>个，客语<strong>{{ info.ulNum }}</strong>个</p>
     </div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'stat',
-  mounted () {
-    var addr = '/stat/'
-    var request = new XMLHttpRequest()
-    request.responseType = 'json'
-    request.open('GET', addr)
-    request.onload = () => {
-      if (request.status === 200) {
-        this.info = request.response
-      }
-    }
-    request.send()
-  },
-  data () {
-    return {
-      info: []
-    }
+  data: () => ({
+    info: []
+  }),
+  async mounted () {
+    this.info = (await axios.get('/stat')).data
   }
 }
 </script>
@@ -42,7 +33,7 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     p {
       font-size: 12px;
     }

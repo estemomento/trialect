@@ -10,11 +10,9 @@
 <script>
 export default {
   name: 'search',
-  data () {
-    return {
-      char: ''
-    }
-  },
+  data: () => ({
+    char: ''
+  }),
   methods: {
     jump () {
       // TODO 交互提升
@@ -29,13 +27,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width:768px) {
-  input[type=search] {
-    width: 350px;
-    font-size: 18px;
-  }
-}
-
 .search-wrapper {
   width: 100%;
   height: 100px;
@@ -54,7 +45,6 @@ export default {
     display: flex;
 
     input[type=search] {
-
       width: 80%;
       font-size: 16px;
       height: 50px;
@@ -62,6 +52,11 @@ export default {
       border-radius: 5px;
       outline: none;
       padding: 10px;
+
+      @media (min-width:768px) {
+        width: 350px;
+        font-size: 18px;
+      }
     }
 
     button {

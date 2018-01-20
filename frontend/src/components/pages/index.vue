@@ -9,10 +9,10 @@
     <search/>
     <stat/>
     <div class="card-wrapper">
-      <card :img="introBg" title="方言概况" info="简要介绍茂名地区方言现状以及分布" addr="/intro"></card>
-      <card :img="pinyinBg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
-      <card :img="downloadBg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
-      <card :img="aboutBg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
+      <card img="http://alekolau.cn/trialect/intro.png" title="方言概况" info="简要介绍茂名地区方言现状以及分布" addr="/intro"></card>
+      <card img="http://alekolau.cn/trialect/pinyin.jpg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
+      <card img="http://alekolau.cn/trialect/download.jpg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
+      <card img="http://alekolau.cn/trialect/about.jpg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
     </div>
   </div>
 </template>
@@ -28,14 +28,6 @@ export default {
     card,
     stat,
     search
-  },
-  data () {
-    return {
-      introBg: 'http://alekolau.cn/trialect/intro.png',
-      pinyinBg: 'http://alekolau.cn/trialect/pinyin.jpg',
-      downloadBg: 'http://alekolau.cn/trialect/download.jpg',
-      aboutBg: 'http://alekolau.cn/trialect/about.jpg'
-    }
   }
 }
 </script>
@@ -50,19 +42,20 @@ export default {
 
   .intro-wrapper {
     width: 100%;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: url('http://alekolau.cn/trialect/quote-bg.jpg');
     background-size: cover;
+
     @media (max-width:767px) {
       height: 200px;
     }
-    @media (min-width:768px) {
-      height: 300px;
-    }
 
     .intro {
+      width: 400px;
+      height: 80px;
       background: #fff;
       box-shadow: 2px 2px 5px #666;
       padding: 10px;
@@ -70,15 +63,12 @@ export default {
       flex-direction: column;
       justify-content: space-around;
       opacity: 0.8;
+
       @media (max-width:767px) {
         width: 200px;
         height: 100px;
       }
-      @media (min-width:768px) {
-        width: 400px;
-        height: 80px;
-      }
-    
+
 
       .big {
         font-size: 30px;
@@ -99,10 +89,12 @@ export default {
     flex-wrap: wrap;
     width: 1000px;
     height: 300px;
+
     @media (max-width:1000px) {
       width: 500px;
       height: 600px;
     }
+
     @media (max-width:500px) {
       width: 250px;
       height: 1200px;

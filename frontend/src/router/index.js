@@ -13,39 +13,12 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   routes: [
-    {
-      path: '/',
-      name: 'index',
-      component: index
-    },
-    {
-      path: '/intro',
-      name: 'intro',
-      component: intro
-    },
-    {
-      path: '/pinyin',
-      name: 'pinyin',
-      component: pinyin
-    },
-    {
-      path: '/resource',
-      name: 'resource',
-      component: resource
-    },
-    {
-      path: '/about',
-      name: 'about',
-      component: about
-    },
-    {
-      path: '/char/:ch', // 匹配单个汉字
-      name: 'char',
-      component: char
-    },
-    {
-      path: '*',
-      component: notfound
-    }
+    { path: '/', component: index },
+    { path: '/intro', component: intro },
+    { path: '/pinyin', component: pinyin },
+    { path: '/resource', component: resource },
+    { path: '/about', component: about },
+    { path: '/char/:ch', component: char }, // 匹配单个汉字
+    { path: '*', component: notfound }
   ]
 })

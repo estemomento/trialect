@@ -438,13 +438,11 @@ export default {
   components: {
     paper
   },
-  data () {
-    return {
-      maoming: false,
-      xiadong: false,
-      shalang: false
-    }
-  }
+  data: () => ({
+    maoming: false,
+    xiadong: false,
+    shalang: false
+  })
 }
 </script>
 

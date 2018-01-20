@@ -1,4 +1,4 @@
-<template>
+<template functional>
   <nav>
     <ul>
       <li><router-link to="/">主页</router-link></li>
@@ -9,12 +9,6 @@
     </ul>
   </nav>
 </template>
-
-<script>
-export default {
-  name: 'nav'
-}
-</script>
 
 <style lang="scss" scoped>
 @import '../../assets/const.scss';
@@ -36,7 +30,7 @@ a {
   height: 40px;
   font-size: 16px;
   text-decoration: none;
-  padding: 0 12px; 
+  padding: 0 12px;
 }
 
 a:hover {

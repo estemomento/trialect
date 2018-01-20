@@ -13,14 +13,12 @@ import trNav from '@/components/elements/nav'
 
 export default {
   name: 'header',
-  data () {
-    return {
-      collapsed: false
-    }
-  },
   components: {
     trNav
   },
+  data: () => ({
+    collapsed: false
+  }),
   mounted () {
     window.addEventListener('scroll', () => {
       this.collapsed = window.matchMedia('(max-width:767px)').matches && window.scrollY >= 40
@@ -34,7 +32,7 @@ export default {
 
 @media (max-width:767px) {
   header {
-    height: 100px;    
+    height: 100px;
     flex-direction: column;
   }
 
@@ -67,7 +65,7 @@ export default {
     margin: 10px 20px 10px 40px;
     font-size: 40px;
   }
-  
+
   nav {
     margin-right: 40px;
   }
@@ -80,7 +78,7 @@ header {
   position: fixed;
   background: $main-color;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -91,7 +89,7 @@ span {
 }
 
 .logo {
-  transition: 0.2s;  
+  transition: 0.2s;
   text-decoration: none;
   color: white;
   font-weight: bold;

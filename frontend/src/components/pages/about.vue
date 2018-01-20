@@ -76,44 +76,27 @@ export default {
   components: {
     paper
   },
-  data () {
-    return {
-      sponsor: 'http://alekolau.cn/trialect/sponsor.png',
-      intro: [
-        { title: '为什么叫Trialect？', content: '茂名地区有三大类方言：粤语、闽语、客语。把代表「三」的 tri- 和方言 dialect 组合，就有了Trialect。' },
-        { title: 'Trialect提供什么？', content: '目前提供三种方言的拼音方案和字音查询，另提供研究资料索引。未来将加入更多口音和在线发音。' },
-        { title: 'Trialect的宗旨？', content: '站长希望通过建立方言数字档案保护濒危方言，发扬和传承茂名方言文化。本站秉持非营利原则，相关收入均用于维护。' }
-      ],
-      yue: [
-        { place: '茂名市区', contrib: '《茂名市志》、Aleko Lau' }
-      ],
-      min: [
-        { place: '电白霞洞', contrib: '《电白方言志》' }
-      ],
-      ke: [
-        { place: '电白沙琅', contrib: '《电白方言志》、《粤西客家方言调查报告》、小翠' }
-      ]
-    }
-  }
+  data: () => ({
+    sponsor: 'http://alekolau.cn/trialect/sponsor.png',
+    intro: [
+      { title: '为什么叫Trialect？', content: '茂名地区有三大类方言：粤语、闽语、客语。把代表「三」的 tri- 和方言 dialect 组合，就有了Trialect。' },
+      { title: 'Trialect提供什么？', content: '目前提供三种方言的拼音方案和字音查询，另提供研究资料索引。未来将加入更多口音和在线发音。' },
+      { title: 'Trialect的宗旨？', content: '站长希望通过建立方言数字档案保护濒危方言，发扬和传承茂名方言文化。本站秉持非营利原则，相关收入均用于维护。' }
+    ],
+    yue: [
+      { place: '茂名市区', contrib: '《茂名市志》、Aleko Lau' }
+    ],
+    min: [
+      { place: '电白霞洞', contrib: '《电白方言志》' }
+    ],
+    ke: [
+      { place: '电白沙琅', contrib: '《电白方言志》、《粤西客家方言调查报告》、小翠' }
+    ]
+  })
 }
 </script>
 
 <style lang='scss' scoped>
-@media (max-width:767px) {
-  .about-bottom {
-    flex-direction: column;
-    .left, .right {
-      width: 100%;
-    }
-  }
-}
-@media (min-width:768px) {
-  .about-bottom {
-    .left, .right {
-      width: 320px;
-    }
-  }
-}
 .about {
   min-height: calc(100vh - 110px);
   display: flex;
@@ -126,6 +109,18 @@ export default {
       .about-bottom {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width:767px) {
+          flex-direction: column;
+        }
+
+        .left, .right {
+          width: 320px;
+
+          @media (max-width:767px) {
+            width: 100%;
+          }
+        }
 
         a {
           color: #000;

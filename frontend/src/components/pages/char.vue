@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 import paper from '@/components/elements/paper'
 import search from '@/components/elements/search'
 
@@ -37,32 +38,16 @@ export default {
     paper,
     search
   },
-  beforeRouteUpdate (to, from, next) {
+  async beforeRouteUpdate (to, from, next) {
     next()
-    this.getchar()
+    this.info = (await axios.get('/data/' + this.$route.params.ch)).data
   },
-  mounted () {
-    this.getchar()
+  async mounted () {
+    this.info = (await axios.get('/data/' + this.$route.params.ch)).data
   },
-  methods: {
-    getchar () {
-      var addr = '/data/' + this.$route.params.ch
-      var request = new XMLHttpRequest()
-      request.responseType = 'json'
-      request.open('GET', addr)
-      request.onload = () => {
-        if (request.status === 200) {
-          this.info = request.response
-        }
-      }
-      request.send()
-    }
-  },
-  data () {
-    return {
-      info: []
-    }
-  }
+  data: () => ({
+    info: []
+  })
 }
 </script>
 
