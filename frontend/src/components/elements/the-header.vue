@@ -30,62 +30,42 @@ export default {
 <style lang="scss" scoped>
 @import '../../assets/const.scss';
 
-@media (max-width:767px) {
-  header {
-    height: 100px;
-    flex-direction: column;
-  }
-
-  span {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .logo {
-    font-size: 32px;
-    margin: 5px 0;
-  }
-
-  .slogan {
-    display: none;
-  }
-
-  nav {
-    margin-right: 0;
-    margin-bottom: 5px;
-  }
-}
-
-@media (min-width:768px) {
-  span {
-    justify-content: flex-start;
-  }
-
-  .logo {
-    margin: 10px 20px 10px 40px;
-    font-size: 40px;
-  }
-
-  nav {
-    margin-right: 40px;
-  }
-}
-
 header {
   z-index: 1000;
   transition: 0.2s;
   width: 100%;
+  height: 70px;
   position: fixed;
   background: $main-color;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width:767px) {
+    height: 100px;
+    flex-direction: column;
+  }
 }
 
 span {
   transition: 0.2s;
   display: flex;
-  align-items: center
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width:767px) {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+nav {
+  margin-right: 40px;
+
+  @media (max-width:767px) {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
 }
 
 .logo {
@@ -93,12 +73,23 @@ span {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  text-shadow: 1px 2px #000 ;
+  text-shadow: 1px 2px #000;
+  margin: 10px 20px 10px 40px;
+  font-size: 40px;
+
+  @media (max-width:767px) {
+    margin: 5px 0;
+    font-size: 32px;
+  }
 }
 
 .slogan {
   color: #aaa;
   font-size: 16px;
+
+  @media (max-width:767px) {
+    display: none;
+  }
 }
 
 header.collapsed {

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <the-header/>
-    <router-view class="page"/>
+    <transition name="fade" mode="out-in">
+      <router-view class="page"/>
+    </transition>
     <the-footer/>
   </div>
 </template>
@@ -47,6 +49,14 @@ export default {
 * {
   margin: 0;
   padding: 0;
+}
+
+.fade-enter-active, .fade-leave-active, .fade-appear-active {
+  transition: opacity 0.25s;
+}
+
+.fade-enter, .fade-leave-active, .fade-appear {
+  opacity: 0;
 }
 
 ::-webkit-scrollbar {
