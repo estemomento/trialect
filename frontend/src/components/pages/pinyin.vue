@@ -431,12 +431,12 @@
 </template>
 
 <script>
-import paper from '@/components/elements/paper'
+import Paper from '@/components/elements/paper'
 
 export default {
   name: 'pinyin',
   components: {
-    paper
+    Paper
   },
   data: () => ({
     maoming: false,
@@ -456,18 +456,24 @@ export default {
 
   .wrapper {
     .inner {
+      .title {
+        cursor: pointer;
+        user-select: none;
+      }
+
       .table-wrapper {
         width: 100%;
         overflow: auto;
       }
+
       table {
         width: 100px;
         white-space: nowrap;
         table-layout: fixed;
         margin: 5px 0;
         text-align: center;
-        th,
-        td {
+
+        th, td {
           white-space: nowrap;
           width: 36px;
 

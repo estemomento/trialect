@@ -61,7 +61,7 @@
         <div class="right">
           <h2>赞助本站</h2>
           <p>欢迎赞助，所有支出都会公布：）</p>
-          <img :src="sponsor"></img>
+          <img :src="sponsor">
         </div>
       </div>
     </paper>
@@ -69,12 +69,12 @@
 </template>
 
 <script>
-import paper from '@/components/elements/paper'
+import Paper from '@/components/elements/paper'
 
 export default {
   name: 'about',
   components: {
-    paper
+    Paper
   },
   data: () => ({
     sponsor: 'http://alekolau.cn/trialect/sponsor.png',

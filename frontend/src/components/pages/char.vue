@@ -29,14 +29,14 @@
 
 <script>
 import axios from 'axios'
-import paper from '@/components/elements/paper'
-import search from '@/components/elements/search'
+import Paper from '@/components/elements/paper'
+import Search from '@/components/elements/search'
 
 export default {
-  name: 'index',
+  name: 'char',
   components: {
-    paper,
-    search
+    Paper,
+    Search
   },
   async beforeRouteUpdate (to, from, next) {
     next()
@@ -60,7 +60,6 @@ export default {
   background: #ddd;
 
   .character{
-
     p {
       font-size: 14px;
 
@@ -69,6 +68,7 @@ export default {
         font-size: 18px;
       }
     }
+
     .top-info p{
       margin: 0;
     }

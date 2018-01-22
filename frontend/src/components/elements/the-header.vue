@@ -4,17 +4,17 @@
       <router-link class="logo" to="/">Trialect</router-link>
       <p class="slogan">——「记录和保护茂名方言」</p>
     </span>
-    <tr-nav/>
+    <the-nav/>
   </header>
 </template>
 
 <script>
-import trNav from '@/components/elements/nav'
+import TheNav from '@/components/elements/the-nav'
 
 export default {
   name: 'header',
   components: {
-    trNav
+    TheNav
   },
   data: () => ({
     collapsed: false

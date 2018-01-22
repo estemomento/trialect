@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import paper from '@/components/elements/paper'
+import Paper from '@/components/elements/paper'
 
 export default {
-  name: 'notfound',
+  name: 'not-found',
   components: {
-    paper
+    Paper
   }
 }
 </script>

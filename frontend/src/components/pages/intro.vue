@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import paper from '@/components/elements/paper'
+import Paper from '@/components/elements/paper'
 
 export default {
   name: 'intro',
   components: {
-    paper
+    Paper
   }
 }
 </script>

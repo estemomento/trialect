@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <tr-header/>
+    <the-header/>
     <router-view class="page"/>
-    <tr-footer/>
+    <the-footer/>
   </div>
 </template>
 
 <script>
-import trHeader from '@/components/elements/header'
-import trFooter from '@/components/elements/footer'
+import TheHeader from '@/components/elements/the-header'
+import TheFooter from '@/components/elements/the-footer'
 
 export default {
   name: 'app',
   components: {
-    trHeader,
-    trFooter
+    TheHeader,
+    TheFooter
   }
 }
 </script>

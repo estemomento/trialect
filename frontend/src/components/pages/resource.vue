@@ -26,12 +26,12 @@
 </template>
 
 <script>
-import paper from '@/components/elements/paper'
+import Paper from '@/components/elements/paper'
 
 export default {
   name: 'resource',
   components: {
-    paper
+    Paper
   },
   data: () => ({
     fyz: [

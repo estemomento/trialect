@@ -18,16 +18,16 @@
 </template>
 
 <script>
-import card from '@/components/elements/card'
-import stat from '@/components/elements/stat'
-import search from '@/components/elements/search'
+import Card from '@/components/elements/card'
+import Stat from '@/components/elements/stat'
+import Search from '@/components/elements/search'
 
 export default {
   name: 'index',
   components: {
-    card,
-    stat,
-    search
+    Card,
+    Stat,
+    Search
   }
 }
 </script>
