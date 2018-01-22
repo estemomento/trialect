@@ -1,8 +1,8 @@
 <template>
   <div class="stat-wrapper">
     <div class="stat">
-      <p>收录：<strong>{{ info.charNum }}</strong>字、<strong>{{ info.proNum }}</strong>韵、<strong>{{ info.mmNum + info.xdNum + info.ulNum }}</strong>方言读音</p>
-      <p>其中粤语<strong>{{ info.mmNum }}</strong>个，闽语<strong>{{ info.xdNum }}</strong>个，客语<strong>{{ info.ulNum }}</strong>个</p>
+      <p>收录：<strong>{{ info.char }}</strong>字、<strong>{{ info.pronunciation }}</strong>韵、<strong>{{ info.maoming + info.xiadong + info.shalang }}</strong>方言读音</p>
+      <p>其中粤语<strong>{{ info.maoming }}</strong>个，闽语<strong>{{ info.xiadong }}</strong>个，客语<strong>{{ info.shalang }}</strong>个</p>
     </div>
   </div>
 </template>

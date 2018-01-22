@@ -22,18 +22,18 @@ app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/stat/', async function(req, res, next) {
-  var charNum = (await trialect.distinct('char')).length
-  var proNum = await trialect.count()
-  var mmNum = await trialect.count({'dialects.0.py': {$ne: ''}})
-  var xdNum = await trialect.count({'dialects.1.py': {$ne: ''}})
-  var ulNum = await trialect.count({'dialects.2.py': {$ne: ''}})
-  res.send({charNum, proNum, mmNum, xdNum, ulNum})
+  const char = (await trialect.distinct('char')).length
+  const pronunciation = await trialect.count()
+  const maoming = await trialect.count({'dialects.0.py': {$ne: ''}})
+  const xiadong = await trialect.count({'dialects.1.py': {$ne: ''}})
+  const shalang = await trialect.count({'dialects.2.py': {$ne: ''}})
+  res.send({ char, pronunciation, maoming, xiadong, shalang })
 })
 
-app.get('/data/:id', function (req, res, next) {
-  var id = req.params.id
+app.get('/data/:id', (req, res, next) => {
+  const id = req.params.id
   console.log('Request: ' + id)
-  trialect.find({'char': id}).toArray(function (err, docs) {
+  trialect.find({'char': id}).toArray((err, docs) => {
     assert.equal(err, null)
     res.send(docs)
   })
