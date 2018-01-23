@@ -4,9 +4,11 @@
   </footer>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '../../assets/const.scss';
+
 footer {
-  background: #664010;
+  background: $main-color;
   display: flex;
   justify-content: center;
   height: 40px;
