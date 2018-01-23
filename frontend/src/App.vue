@@ -35,15 +35,6 @@ export default {
   h4, p {
     font-size: 14px;
   }
-  .page {
-    padding-top: 100px;
-  }
-}
-
-@media (min-width:768px) {
-  .page {
-    padding-top: 70px;
-  }
 }
 
 * {
@@ -68,5 +59,18 @@ export default {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ddd;
+  min-height: calc(100vh - 40px);
+  padding-top: 70px;
+
+  @media (max-width:767px) {
+    padding-top: 100px;
+  }
 }
 </style>

@@ -448,12 +448,6 @@ export default {
 
 <style lang='scss' scoped>
 .pinyin {
-  min-height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ddd;
-
   .wrapper {
     .inner {
       .title {

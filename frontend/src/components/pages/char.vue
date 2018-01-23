@@ -53,12 +53,6 @@ export default {
 
 <style lang="scss" scoped>
 .char {
-  min-height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ddd;
-
   .character{
     p {
       font-size: 14px;

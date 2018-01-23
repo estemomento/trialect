@@ -19,12 +19,6 @@ export default {
 
 <style lang="scss" scoped>
 .not-found {
-  min-height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ddd;
-
   a {
     color: #000;
     text-decoration: underline;

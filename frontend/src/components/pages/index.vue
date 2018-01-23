@@ -32,14 +32,8 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .index {
-  min-height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ddd;
-
   .intro-wrapper {
     width: 100%;
     height: 300px;
@@ -66,7 +60,7 @@ export default {
 
       @media (max-width:767px) {
         width: 200px;
-        height: 100px;
+        height: 120px;
       }
 
 

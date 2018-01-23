@@ -88,13 +88,3 @@ export default {
   })
 }
 </script>
-
-<style lang='scss' scoped>
-.resource {
-  min-height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #ddd;
-}
-</style>
