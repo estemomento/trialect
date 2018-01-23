@@ -25,7 +25,6 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
 
   @media (max-width: 767px) {
     padding: 20px 8px;
@@ -46,7 +45,6 @@ export default {
     box-shadow: 2px 2px 5px #666;
     padding: 36px;
     border-radius: 5px;
-    box-sizing: border-box;
 
     h1 {
       margin: 18px 0;

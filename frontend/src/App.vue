@@ -49,13 +49,14 @@ export default {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .fade-enter-active, .fade-leave-active, .fade-appear-active {
-  transition: opacity 0.25s;
+  transition: opacity 0.4s;
 }
 
-.fade-enter, .fade-leave-active, .fade-appear {
+.fade-enter, .fade-leave-to, .fade-appear {
   opacity: 0;
 }
 
