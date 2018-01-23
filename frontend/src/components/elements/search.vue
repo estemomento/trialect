@@ -68,6 +68,7 @@ export default {
       border: 0;
       border-radius: 5px;
       padding: 10px;
+      cursor: pointer;
 
       &:hover {
         background-color: #ccc;
