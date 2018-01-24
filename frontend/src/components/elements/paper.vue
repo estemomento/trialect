@@ -40,12 +40,12 @@ export default {
 
   .inner {
     background: #fff;
-    width: calc(100% - 100px);
+    width: calc(100% - 24px);
     box-shadow: 2px 2px 5px #666;
     padding: 36px;
     border-radius: 5px;
 
-    @media (min-width: 1100px) {
+    @media (min-width: 1024px) {
       width: 1000px;
     }
 
@@ -77,6 +77,11 @@ export default {
       margin: 15px 0;
       color: #444;
       line-height: 24px;
+
+      @media (max-width:767px) {
+        margin: 10px 0;
+        line-height: 20px;
+      }
     }
   }
 }

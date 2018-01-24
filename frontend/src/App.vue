@@ -22,25 +22,39 @@ export default {
 </script>
 
 <style lang="scss">
-@media (max-width:767px) {
-  h1 {
-    font-size: 30px;
-  }
-  h2 {
-    font-size: 22px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  h4, p {
-    font-size: 16px;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 30px;
+
+  @media (max-width:767px) {
+    font-size: 24px;
+  }
+}
+h2 {
+  font-size: 24px;
+
+  @media (max-width:767px) {
+    font-size: 18px;
+  }
+}
+h3 {
+  font-size: 18px;
+
+  @media (max-width:767px) {
+    font-size: 16px;
+  }
+}
+h4, p {
+  font-size: 16px;
+
+  @media (max-width:767px) {
+    font-size: 14px;
+  }
 }
 
 .fade-enter-active, .fade-leave-active, .fade-appear-active {

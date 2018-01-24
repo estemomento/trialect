@@ -109,7 +109,7 @@ export default {
         }
 
         .left, .right {
-          width: 320px;
+          width: 50%;
 
           @media (max-width:767px) {
             width: 100%;
