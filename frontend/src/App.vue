@@ -33,7 +33,7 @@ export default {
     font-size: 18px;
   }
   h4, p {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 

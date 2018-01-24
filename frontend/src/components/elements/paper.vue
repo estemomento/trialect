@@ -40,11 +40,14 @@ export default {
 
   .inner {
     background: #fff;
-    width: 100%;
-    max-width: 660px;
+    width: calc(100% - 100px);
     box-shadow: 2px 2px 5px #666;
     padding: 36px;
     border-radius: 5px;
+
+    @media (min-width: 1100px) {
+      width: 1000px;
+    }
 
     h1 {
       margin: 18px 0;
