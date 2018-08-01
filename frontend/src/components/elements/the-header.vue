@@ -1,10 +1,12 @@
 <template>
   <header class="header" :class="{ collapsed: collapsed }">
-    <span>
-      <router-link class="logo" to="/">Trialect</router-link>
-      <p class="slogan">——「记录和保护茂名方言」</p>
-    </span>
-    <the-nav/>
+    <div class="header-wrapper">
+      <span>
+        <router-link class="logo" to="/">Trialect</router-link>
+        <p class="slogan">——「记录和保护茂名方言」</p>
+      </span>
+      <the-nav/>
+    </div>
   </header>
 </template>
 
@@ -38,12 +40,22 @@ header {
   position: fixed;
   background: $main-color;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 
   @media (max-width:767px) {
     height: 100px;
-    flex-direction: column;
+  }
+
+  .header-wrapper {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width:767px) {
+      flex-direction: column;
+    }
   }
 }
 
