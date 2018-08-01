@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/stat/', async function(req, res, next) {
+app.get('/stat/', async (req, res, next) => {
   const char = (await trialect.distinct('char')).length
   const pronunciation = await trialect.count()
   const maoming = await trialect.count({'dialects.0.py': {$ne: ''}})

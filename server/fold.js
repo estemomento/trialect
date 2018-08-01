@@ -5,7 +5,7 @@ let result = require(process.argv[2])
     return {
       no,
       char,
-      middleChinese: {init, mouth, level, rhyme, tone, fanqie, trans},
+      middleChinese: { init, mouth, level, rhyme, tone, fanqie, trans },
       pinyin,
       dialects: [{ name: '粤语（茂名市区）', py: maoming },
                 { name: '闽语（电白霞洞）', py: xiadong },
