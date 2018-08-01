@@ -52,7 +52,7 @@
           <p>本站基于
             <a href="http://www.gnu.org/licenses/gpl-3.0.html">GNU/GPL-3.0</a>
             协议开源，代码和数据托管在
-            <a href="https://github.com/estemomento/trialect">GitHub仓库</a>
+            <a href="https://github.com/estemomento/trialect">GitHub 仓库</a>
             。
           </p>
           <p>资料来源网络，如有侵权请联系站长。</p>
@@ -69,13 +69,11 @@
 </template>
 
 <script>
-import Paper from '@/components/elements/paper'
+import Paper from '@/elements/paper'
 
 export default {
   name: 'about',
-  components: {
-    Paper
-  },
+  components: { Paper },
   data: () => ({
     sponsor: 'http://alekolau.cn/trialect/sponsor.png',
     intro: [

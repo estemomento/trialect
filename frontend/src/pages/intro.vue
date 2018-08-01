@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import Paper from '@/components/elements/paper'
+import Paper from '@/elements/paper'
 
 export default {
   name: 'intro',

@@ -11,13 +11,11 @@
 </template>
 
 <script>
-import TheNav from '@/components/elements/the-nav'
+import TheNav from '@/elements/the-nav'
 
 export default {
   name: 'header',
-  components: {
-    TheNav
-  },
+  components: { TheNav },
   data: () => ({
     collapsed: false
   }),
@@ -30,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../assets/const.scss';
+@import '../assets/const.scss';
 
 header {
   z-index: 1000;
@@ -41,6 +39,7 @@ header {
   background: $main-color;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media (max-width:767px) {
     height: 100px;

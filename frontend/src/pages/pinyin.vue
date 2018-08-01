@@ -17,19 +17,14 @@
 </template>
 
 <script>
-import Paper from '@/components/elements/paper'
-import MaomingScheme from '@/components/elements/pinyin-scheme/maoming'
-import XiadongScheme from '@/components/elements/pinyin-scheme/xiadong'
-import ShalangScheme from '@/components/elements/pinyin-scheme/shalang'
+import Paper from '@/elements/paper'
+import MaomingScheme from '@/elements/pinyin-scheme/maoming'
+import XiadongScheme from '@/elements/pinyin-scheme/xiadong'
+import ShalangScheme from '@/elements/pinyin-scheme/shalang'
 
 export default {
   name: 'pinyin',
-  components: {
-    Paper,
-    MaomingScheme,
-    XiadongScheme,
-    ShalangScheme
-  },
+  components: { Paper, MaomingScheme, XiadongScheme, ShalangScheme },
   data: () => ({
     open: 'maoming'
   })

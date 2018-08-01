@@ -9,15 +9,12 @@
 </template>
 
 <script>
-import TheHeader from '@/components/elements/the-header'
-import TheFooter from '@/components/elements/the-footer'
+import TheHeader from '@/elements/the-header'
+import TheFooter from '@/elements/the-footer'
 
 export default {
   name: 'app',
-  components: {
-    TheHeader,
-    TheFooter
-  }
+  components: { TheHeader, TheFooter }
 }
 </script>
 

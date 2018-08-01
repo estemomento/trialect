@@ -11,7 +11,7 @@
 </template>
 
 <style lang="scss" scoped>
-@import '../../assets/const.scss';
+@import '../assets/const.scss';
 
 ul {
   list-style-type: none;

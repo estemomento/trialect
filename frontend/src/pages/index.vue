@@ -18,9 +18,9 @@
 </template>
 
 <script>
-import Card from '@/components/elements/card'
-import Stat from '@/components/elements/stat'
-import Search from '@/components/elements/search'
+import Card from '@/elements/card'
+import Stat from '@/elements/stat'
+import Search from '@/elements/search'
 
 export default {
   name: 'index',

@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../../assets/const.scss";
+@import "../assets/const.scss";
 
 .wrapper {
   width: 100%;

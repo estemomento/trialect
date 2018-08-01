@@ -29,8 +29,8 @@
 
 <script>
 import axios from 'axios'
-import Paper from '@/components/elements/paper'
-import Search from '@/components/elements/search'
+import Paper from '@/elements/paper'
+import Search from '@/elements/search'
 
 export default {
   name: 'char',
