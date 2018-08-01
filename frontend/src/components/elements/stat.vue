@@ -1,7 +1,7 @@
 <template>
   <div class="stat-wrapper">
     <div class="stat">
-      <p>收录：<strong>{{ info.char }}</strong>字、<strong>{{ info.pronunciation }}</strong>韵、<strong>{{ info.maoming + info.xiadong + info.shalang }}</strong>方言读音</p>
+      <p>收录：<strong>{{ info.char }}</strong>字、<strong>{{ info.rhyme }}</strong>韵、<strong>{{ info.pronunciation }}</strong>方言读音</p>
       <p>其中粤语<strong>{{ info.maoming }}</strong>个，闽语<strong>{{ info.xiadong }}</strong>个，客语<strong>{{ info.shalang }}</strong>个</p>
     </div>
   </div>
@@ -13,10 +13,11 @@ import axios from 'axios'
 export default {
   name: 'stat',
   data: () => ({
-    info: []
+    info: {}
   }),
   async mounted () {
     this.info = (await axios.get('/stat')).data
+    for (const i in this.info) this.info[i] = this.info[i].toLocaleString()
   }
 }
 </script>
