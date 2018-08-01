@@ -23,11 +23,12 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.get('/stat/', async (req, res, next) => {
   const char = (await trialect.distinct('char')).length
-  const pronunciation = await trialect.count()
+  const rhyme = await trialect.count()
   const maoming = await trialect.count({'dialects.0.py': {$ne: ''}})
   const xiadong = await trialect.count({'dialects.1.py': {$ne: ''}})
   const shalang = await trialect.count({'dialects.2.py': {$ne: ''}})
-  res.send({ char, pronunciation, maoming, xiadong, shalang })
+  const pronunciation = maoming + xiadong + shalang
+  res.send({ char, rhyme, maoming, xiadong, shalang, pronunciation })
 })
 
 app.get('/data/:id', (req, res, next) => {
@@ -41,7 +42,7 @@ app.get('/data/:id', (req, res, next) => {
 
 app.use(fallback('index.html', {root: path.join(__dirname, 'public')}))
 
-module.exports = mongo.connect('mongodb://trialect:tria1ectp%40ssw0rd@localhost:27017/trialect', {uri_decode_auth: true}).then(_db => {
+module.exports = mongo.connect('mongodb://trialect:tria1ectp%40ssw0rd@120.78.173.156:27017/trialect', {uri_decode_auth: true}).then(_db => {
   trialect = _db.collection('trialect')
   return app
 })
