@@ -12,12 +12,7 @@
 <script>
 export default {
   name: 'card',
-  props: {
-    img: String,
-    title: String,
-    info: String,
-    addr: String
-  }
+  props: { img: String, title: String, info: String, addr: String }
 }
 </script>
 
@@ -32,6 +27,7 @@ export default {
   border-radius: 5px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   div {
     width: 100%;
@@ -55,17 +51,14 @@ export default {
   }
 
   a {
-    padding: 5px 10px;
-    margin-right: 10px;
-    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
     background: $main-color;
     color: #fff;
-    border: 0;
-    border-radius: 5px;
-    align-self: flex-end;
   }
 }
 </style>
