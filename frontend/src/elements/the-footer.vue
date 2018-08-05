@@ -1,6 +1,6 @@
 <template functional>
   <footer>
-    <p>Copyright 2017 <a href="http://alekolau.cn">Aleko Lau</a></p>
+    <p>Copyright 2017 - 2018 <a href="http://estemomento.github.io">Aleko Lau</a></p>
   </footer>
 </template>
 
