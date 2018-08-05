@@ -1,16 +1,17 @@
 <template>
   <div class="pinyin">
     <paper title="拼音">
-      <select v-model="open">
-        <option value="maoming">粤语（茂名市区）</option>
-        <option value="xiadong">闽语（电白霞洞）</option>
-        <option value="shalang">客语（电白沙琅）</option>
-      </select>
-      <hr>
+      <div class="selector">
+        <button class="selector-opt"
+        v-for="(v, i) in schemes"
+        @click="() => open = v.val"
+        :key="i"
+        :class="{selected: open === v.val}">{{v.name}}</button>
+      </div>
       <transition name="fade" mode="out-in">
-        <maoming-scheme v-if="open === 'maoming'"></maoming-scheme>
-        <xiadong-scheme v-else-if="open === 'xiadong'"></xiadong-scheme>
-        <shalang-scheme v-else-if="open === 'shalang'"></shalang-scheme>
+        <maoming v-if="open === 'y-mm'"></maoming>
+        <xiadong v-else-if="open === 'm-xd'"></xiadong>
+        <shalang v-else-if="open === 'k-sl'"></shalang>
       </transition>
     </paper>
   </div>
@@ -18,55 +19,59 @@
 
 <script>
 import Paper from '@/elements/paper'
-import MaomingScheme from '@/elements/pinyin-scheme/maoming'
-import XiadongScheme from '@/elements/pinyin-scheme/xiadong'
-import ShalangScheme from '@/elements/pinyin-scheme/shalang'
+import Maoming from '@/elements/pinyin-scheme/maoming'
+import Xiadong from '@/elements/pinyin-scheme/xiadong'
+import Shalang from '@/elements/pinyin-scheme/shalang'
 
 export default {
   name: 'pinyin',
-  components: { Paper, MaomingScheme, XiadongScheme, ShalangScheme },
+  components: { Paper, Maoming, Xiadong, Shalang },
   data: () => ({
-    open: 'maoming'
+    schemes: [
+      {name: '粤语（茂名市区）', val: 'y-mm'},
+      {name: '闽语（电白霞洞）', val: 'm-xd'},
+      {name: '客语（电白沙琅）', val: 'k-sl'}
+    ],
+    open: 'y-mm'
   })
 }
 </script>
 
 <style lang='scss'>
+@import '../assets/const.scss';
+
 .pinyin {
   .wrapper {
     .inner {
-      select {
-        border: 1px solid black;
-        font-size: 16px;
-        height: 30px;
+      .selector {
+        margin: 12px 0 0;
+        
+        button.selector-opt {
+          transition: 200ms;
+          margin: 0 8px 0 0;
+          border: 0;
+          border-radius: 4px;
+          width: 132px;
+          height: 32px;
+          font-size: 14px;
+          cursor: pointer;
+          background: transparent;
+          outline: none;
+
+          &:hover,
+          &.selected {
+            color: white;
+            background: $main-color;
+          }
+        }
       }
 
       .table-wrapper {
         width: 100%;
         overflow: auto;
-      }
 
-      table {
-        width: 100px;
-        white-space: nowrap;
-        table-layout: fixed;
-        margin: 5px 0;
-        text-align: center;
-
-        th, td {
-          white-space: nowrap;
-          font-size: 18px;
-          width: 60px;
-
-          @media (max-width:1000px) {
-            font-size: 16px;
-            width: 45px;
-          }
-
-          @media (max-width:767px) {
-            font-size: 14px;
-            width: 30px;
-          }
+        h2 {
+          margin-top: 20px;
         }
       }
     }
