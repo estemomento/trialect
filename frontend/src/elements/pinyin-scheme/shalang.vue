@@ -1,137 +1,89 @@
 <template>
   <div class="table-wrapper">
     <h2>声母</h2>
-    <table>
-      <tr>
-        <th></th>
-        <th>b</th><th>p</th><th>m</th><th>f</th><th>d</th><th>t</th><th>n</th><th>l</th><th>sl</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/p/</td><td>/pʰ/</td><td>/m/</td><td>/f/</td><td>/t/</td><td>/tʰ/</td><td>/n/</td><td>/l/</td><td>/ɬ/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>波</td><td>坡</td><td>摸</td><td>科</td><td>多</td><td>拖</td><td>挪</td><td>罗</td><td>锁</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>g</th><th>k</th><th>gw</th><th>kw</th><th>ng</th><th>h</th><th>z</th><th>c</th><th>s</th><th>nj</th><th>j</th><th>w</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/k/</td><td>/kʰ/</td><td>/kʷ/</td><td>/kʷʰ/</td><td>/ŋ/</td><td>/h/</td><td>/ts/</td><td>/tsʰ/</td><td>/s/</td><td>/ɳ/</td><td>/j/</td><td>/w/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>哥</td><td>戈</td><td>光</td><td>框</td><td>鹅</td><td>好</td><td>左</td><td>初</td><td>梳</td><td>义</td><td>衣</td><td>蛙</td>
-      </tr>
-    </table>
+    <Phoneme sym="b" ipa="p" char="波"/>
+    <Phoneme sym="p" ipa="pʰ" char="坡"/>
+    <Phoneme sym="m" ipa="m" char="摸"/>
+    <Phoneme sym="f" ipa="f" char="科"/>
+    <Phoneme sym="d" ipa="t" char="多"/>
+    <Phoneme sym="t" ipa="tʰ" char="拖"/>
+    <Phoneme sym="n" ipa="n" char="挪"/>
+    <Phoneme sym="l" ipa="l" char="罗"/>
+    <Phoneme sym="sl" ipa="ɬ" char="锁"/>
+    <br>
+    <Phoneme sym="g" ipa="k" char="哥"/>
+    <Phoneme sym="k" ipa="kʰ" char="戈"/>
+    <Phoneme sym="gw" ipa="kʷ" char="光"/>
+    <Phoneme sym="kw" ipa="kʷʰ" char="框"/>
+    <Phoneme sym="ng" ipa="ŋ" char="鹅"/>
+    <Phoneme sym="h" ipa="h" char="好"/>
+    <Phoneme sym="z" ipa="ts" char="左"/>
+    <Phoneme sym="c" ipa="tsʰ" char="初"/>
+    <Phoneme sym="s" ipa="s" char="梳"/>
+    <Phoneme sym="nj" ipa="ɳ" char="义"/>
+    <Phoneme sym="j" ipa="j" char="衣"/>
+    <Phoneme sym="w" ipa="w" char="蛙"/>
     <h2>韵母</h2>
-    <table>
-      <tr>
-        <th></th>
-        <th>a</th><th>ai</th><th>au</th><th>am</th><th>an</th><th></th><th>ap</th><th>at</th><th></th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/a/</td><td>/ai/</td><td>/au/</td><td>/am/</td><td>/an/</td><td></td><td>/ap/</td><td>/at/</td><td></td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>阿</td><td>埃</td><td>拗</td><td>暗</td><td>眼</td><td></td><td>鸭</td><td>压</td><td></td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>ia</th><th></th><th>iau</th><th>iam</th><th></th><th>iang</th><th>iap</th><th></th><th>iak</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/ia/</td><td></td><td>/iau/</td><td>/iam/</td><td></td><td>/iaŋ/</td><td>/iap/</td><td></td><td>/iak/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>写</td><td></td><td>小</td><td>尖</td><td></td><td>惊</td><td>接</td><td></td><td>席</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>e</th><th>ei</th><th></th><th>em</th><th>en</th><th>ien</th><th>ep</th><th>et</th><th>iet</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/e/</td><td>/ɛi/</td><td></td><td>/ɛm/</td><td>/ɛn/</td><td>/iɛn/</td><td>/ɛp/</td><td>/ɛt/</td><td>/iɛt/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>矮</td><td>欧</td><td></td><td>森</td><td>恩</td><td>先</td><td>涩</td><td>色</td><td>雪</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>i</th><th>eai</th><th>eau</th><th>eam</th><th>ean</th><th>eang</th><th>eap</th><th>eat</th><th>eak</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/i/</td><td>/əi/</td><td>/əu/</td><td>/əm/</td><td>/ən/</td><td>/əŋ/</td><td>/əp/</td><td>/ət/</td><td>/ək/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>衣</td><td>位</td><td>有</td><td>音</td><td>因</td><td>莺</td><td>入</td><td>益</td><td>格</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>o</th><th>oi</th><th></th><th>on</th><th>ong</th><th>iong</th><th>ot</th><th>ok</th><th>iok</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/o/</td><td>/ɔi/</td><td></td><td>/ɔn/</td><td>/ɔŋ/</td><td>/iɔŋ/</td><td>/ɔt/</td><td>/ɔk/</td><td>/iɔk/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>奥</td><td>哀</td><td></td><td>安</td><td>当</td><td>想</td><td>说</td><td>恶</td><td>脚</td>
-      </tr>
-    </table>
-    <table>
-      <tr>
-        <th></th>
-        <th>u</th><th>ng</th><th></th><th></th><th></th><th>ung</th><th></th><th></th><th>uk</th>
-      </tr>
-      <tr>
-        <th>音标</th>
-        <td>/u/</td><td>/ŋ/</td><td></td><td></td><td></td><td>/uŋ/</td><td></td><td></td><td>/uk/</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>乌</td><td>五</td><td></td><td></td><td></td><td>东</td><td></td><td></td><td>屋</td>
-      </tr>
-    </table>
+    <Phoneme sym="a" ipa="a" char="阿"/>
+    <Phoneme sym="ai" ipa="ai" char="埃"/>
+    <Phoneme sym="au" ipa="au" char="拗"/>
+    <Phoneme sym="am" ipa="am" char="暗"/>
+    <Phoneme sym="an" ipa="an" char="眼"/>
+    <Phoneme sym="ap" ipa="ap" char="鸭"/>
+    <Phoneme sym="at" ipa="at" char="压"/>
+    <br>
+    <Phoneme sym="ia" ipa="ia" char="写"/>
+    <Phoneme sym="iau" ipa="iau" char="小"/>
+    <Phoneme sym="iam" ipa="iam" char="尖"/>
+    <Phoneme sym="iang" ipa="iaŋ" char="惊"/>
+    <Phoneme sym="iap" ipa="iap" char="接"/>
+    <Phoneme sym="iak" ipa="iak" char="席"/>
+    <br>
+    <Phoneme sym="e" ipa="e" char="矮"/>
+    <Phoneme sym="ei" ipa="ɛi" char="欧"/>
+    <Phoneme sym="em" ipa="ɛm" char="森"/>
+    <Phoneme sym="en" ipa="ɛn" char="恩"/>
+    <Phoneme sym="ien" ipa="iɛn" char="先"/>
+    <Phoneme sym="ep" ipa="ɛp" char="涩"/>
+    <Phoneme sym="et" ipa="ɛt" char="色"/>
+    <Phoneme sym="iet" ipa="iɛt" char="雪"/>
+    <br>
+    <Phoneme sym="i" ipa="i" char="衣"/>
+    <Phoneme sym="eai" ipa="əi" char="位"/>
+    <Phoneme sym="eau" ipa="əu" char="有"/>
+    <Phoneme sym="eam" ipa="əm" char="音"/>
+    <Phoneme sym="ean" ipa="ən" char="因"/>
+    <Phoneme sym="eang" ipa="əŋ" char="莺"/>
+    <Phoneme sym="eap" ipa="əp" char="入"/>
+    <Phoneme sym="eat" ipa="ət" char="益"/>
+    <Phoneme sym="eak" ipa="ək" char="格"/>
+    <br>
+    <Phoneme sym="o" ipa="ɔ" char="奥"/>
+    <Phoneme sym="oi" ipa="ɔi" char="哀"/>
+    <Phoneme sym="on" ipa="ɔn" char="安"/>
+    <Phoneme sym="ong" ipa="ɔŋ" char="当"/>
+    <Phoneme sym="iong" ipa="iɔŋ" char="想"/>
+    <Phoneme sym="ot" ipa="ɔt" char="说"/>
+    <Phoneme sym="ok" ipa="ɔk" char="恶"/>
+    <Phoneme sym="iok" ipa="iɔk" char="脚"/>
+    <br>
+    <Phoneme sym="u" ipa="u" char="乌"/>
+    <Phoneme sym="ng" ipa="ŋ" char="五"/>
+    <Phoneme sym="ung" ipa="uŋ" char="东"/>
+    <Phoneme sym="uk" ipa="uk" char="屋"/>
     <h2>声调</h2>
-    <table>
-      <tr>
-        <th></th>
-        <th>阴平</th><th>阳平</th><th>上声</th><th>去声</th><th>阴入</th><th>阳入</th>
-      </tr>
-      <tr>
-        <th>记号</th>
-        <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
-      </tr>
-      <tr>
-        <th>调值</th>
-        <td>33</td><td>24</td><td>31</td><td>51</td><td>2</td><td>5</td>
-      </tr>
-      <tr>
-        <th>例字</th>
-        <td>诗</td><td>时</td><td>使</td><td>世</td><td>识</td><td>食</td>
-      </tr>
-    </table>
+    <Phoneme tone sym="1" :info="[{name: '阴平', val: 33, char: '诗'}]"/>
+    <Phoneme tone sym="2" :info="[{name: '阳平', val: 24, char: '时'}]"/>
+    <Phoneme tone sym="3" :info="[{name: '上声', val: 31, char: '使'}]"/>
+    <Phoneme tone sym="4" :info="[{name: '去声', val: 51, char: '世'}]"/>
+    <Phoneme tone sym="5" :info="[{name: '阴入', val: 2, char: '识'}]"/>
+    <Phoneme tone sym="6" :info="[{name: '阳入', val: 5, char: '食'}]"/>
   </div>
 </template>
+
+<script>
+import Phoneme from '@/elements/phoneme'
+export default {
+  components: { Phoneme }
+}
+</script>

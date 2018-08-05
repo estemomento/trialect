@@ -43,6 +43,8 @@ export default {
 .pinyin {
   .wrapper {
     .inner {
+      user-select: none;
+      
       .selector {
         margin: 12px 0 0;
         
