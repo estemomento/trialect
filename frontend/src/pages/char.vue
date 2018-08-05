@@ -4,9 +4,9 @@
     <paper :title="$route.params.ch" dense>
       <div class="character" v-for="(pro, index) in info" :key="index">
         <hr v-if="index > 0">
-        <div class="top-info">
-          <div class="basic-info">
-            <h3>读音{{ index + 1 }}</h3>
+        <h3>读音 {{ index + 1 }}</h3>
+        <div class="info">
+          <div class="basic">
             <h4>基本资料</h4>
             <p>
               中古：{{ pro.middleChinese.init }}母{{ pro.middleChinese.mouth }}口{{ pro.middleChinese.level }}等{{ pro.middleChinese.rhyme }}韵{{ pro.middleChinese.tone }}声 - [{{ pro.middleChinese.trans }}]
@@ -16,11 +16,14 @@
             <p>
               汉语拼音：{{ pro.pinyin }}</p>
           </div>
-        </div>
-        <div v-for="(dialect, index) in pro.dialects" v-if="dialect.py" :key="index">
-          <h4>{{ dialect.name }}</h4>
-          <p>
-            拼音：<strong>{{ dialect.py }}</strong></p>
+          <div class="pinyin">
+            <h4>读音</h4>
+            <div v-for="(dialect, index) in pro.dialects" v-if="dialect.py" :key="index">
+              <p>{{ dialect.name }}
+                <strong>{{ dialect.py.slice(0, -1) }}<sup>{{dialect.py.slice(-1)}}</sup></strong>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </paper>
@@ -58,13 +61,29 @@ export default {
       font-size: 14px;
 
       strong {
-        color: #000;
-        font-size: 18px;
+        color: black;
+        font-size: 24px;
       }
     }
 
-    .top-info p{
-      margin: 0;
+    .info {
+      display: flex;
+
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+
+      .basic, .pinyin {
+        width: 50%;
+
+        @media (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
     }
   }
 }
