@@ -6,20 +6,17 @@
       <div class="list">
         <h2>书籍</h2>
         <h3>方言志、词典</h3>
-        <p v-for="(item, index) in fyz" :key="index">
-          <strong>《{{ item.title }}》</strong>
-          <span>{{ item.author }}</span>
-        </p>
+        <span v-for="(v, i) in fyz" :key="i">
+          <strong>《{{ v.title }}》</strong>{{ v.author }}
+        </span>
         <h3>其他参考书籍</h3>
-        <p v-for="(item, index) in book" :key="index">
-          <strong>《{{ item.title }}》</strong>
-          <span>{{ item.author }}</span>
-        </p>
+        <span v-for="(v, i) in book" :key="i">
+          <strong>《{{ v.title }}》</strong>{{ v.author }}
+        </span>
         <h2>论文</h2>
-        <p v-for="(item, index) in essay" :key="index">
-          <strong>《{{ item.title }}》</strong>
-          <span>{{ item.author }}</span>
-        </p>
+        <span v-for="(v, i) in essay" :key="i">
+          <strong>《{{ v.title }}》</strong>{{ v.author }}
+        </span>
       </div>
     </paper>
   </div>
@@ -30,9 +27,7 @@ import Paper from '@/elements/paper'
 
 export default {
   name: 'resource',
-  components: {
-    Paper
-  },
+  components: { Paper },
   data: () => ({
     fyz: [
       {title: '茂名市志', author: '茂名市地方志编纂委员会'},
@@ -73,7 +68,6 @@ export default {
       {title: '广东方言特征及其成因', author: '胡兆量'},
       {title: '广东电白沙院黎话记略', author: '陈云龙'},
       {title: '广东电白旧时正话', author: '陈云龙'},
-      {title: '广东电白沙院黎话记略', author: '陈云龙'},
       {title: '广东电白“旧时正话”音系', author: '陈云龙'},
       {title: '高州粤语介词“戥”的功能', author: '曾春燕'},
       {title: '高州方言的变音', author: '曾春燕'},
@@ -88,3 +82,23 @@ export default {
   })
 }
 </script>
+
+<style lang="scss" scoped>
+.resource {
+  .list {
+    span {
+      display: inline-block;
+      margin: 4px 0;
+      width: 50%;
+      font-size: 80%;
+
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      strong {
+        font-size: 120%;
+      }
+    }
+  }
+}
+</style>
