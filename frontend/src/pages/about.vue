@@ -6,31 +6,19 @@
           <strong>{{ item.title }}</strong>
           <span>{{ item.content }}</span>
         </p>
-        <p><strong>如发现错误或希望补充更多方言数据，欢迎通过下列联系方式联系站长，站长将尽快解决。</strong></p>
+        <p><strong>本站秉持非营利原则，相关收入均用于维护。勘误及合作事宜，可通过下列联系方式联系站长。</strong></p>
       </div>
       <hr>
       <div class="about-mid">
-        <h2>资料提供</h2>
-        <div>
-          <h3>粤语：</h3>
-          <p v-for="(item, index) in yue" :key="index">
-            <strong>{{ item.place }}：</strong>
-            <span>{{ item.contrib }}</span>
-          </p>
-        </div>
-        <div>
-          <h3>闽语：</h3>
-          <p v-for="(item, index) in min" :key="index">
-            <strong>{{ item.place }}：</strong>
-            <span>{{ item.contrib }}</span>
-          </p>
-        </div>
-        <div>
-          <h3>客语：</h3>
-          <p v-for="(item, index) in ke" :key="index">
-            <strong>{{ item.place }}：</strong>
-            <span>{{ item.contrib }}</span>
-          </p>
+        <h2>方言数据源</h2>
+        <div class="datasource">
+          <div class="source" v-for="(v1, i) in contrib" :key="i">
+            <h3>{{i}}</h3>
+            <p v-for="(v2, j) in v1" :key="j">
+              <strong>{{ v2.place }}：</strong>
+              <span>{{ v2.contrib }}</span>
+            </p>
+          </div>
         </div>
       </div>
       <hr>
@@ -79,17 +67,19 @@ export default {
     intro: [
       { title: '为什么叫Trialect？', content: '茂名地区有三大类方言：粤语、闽语、客语。把代表「三」的 tri- 和方言 dialect 组合，就有了Trialect。' },
       { title: 'Trialect提供什么？', content: '目前提供三种方言的拼音方案和字音查询，另提供研究资料索引。未来将加入更多口音和在线发音。' },
-      { title: 'Trialect的宗旨？', content: '站长希望通过建立方言数字档案保护濒危方言，发扬和传承茂名方言文化。本站秉持非营利原则，相关收入均用于维护。' }
+      { title: 'Trialect的宗旨？', content: '通过建立方言数字档案保护濒危方言，发扬和传承茂名方言文化。' }
     ],
-    yue: [
-      { place: '茂名市区', contrib: '《茂名市志》、Aleko Lau' }
-    ],
-    min: [
-      { place: '电白霞洞', contrib: '《电白方言志》' }
-    ],
-    ke: [
-      { place: '电白沙琅', contrib: '《电白方言志》、《粤西客家方言调查报告》、小翠' }
-    ]
+    contrib: {
+      粤语: [
+        { place: '茂名市区', contrib: '《茂名市志》、Aleko Lau' }
+      ],
+      闽语: [
+        { place: '电白霞洞', contrib: '《电白方言志》' }
+      ],
+      客语: [
+        { place: '电白沙琅', contrib: '《电白方言志》、《粤西客家方言调查报告》、小翠' }
+      ]
+    }
   })
 }
 </script>
@@ -98,6 +88,24 @@ export default {
 .about {
   .wrapper {
     .inner {
+      .about-mid {
+        .datasource {
+          display: flex;
+
+          @media (max-width:767px) {
+            flex-direction: column;
+          }
+
+          .source {
+            display: inline-block;
+            width: 33%;
+
+            @media (max-width:767px) {
+              width: 100%;
+            }
+          }
+        }
+      }
       .about-bottom {
         display: flex;
         justify-content: space-between;
