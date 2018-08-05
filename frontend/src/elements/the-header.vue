@@ -46,6 +46,7 @@ header {
   }
 
   .header-wrapper {
+    margin: 0 12px;
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -71,10 +72,7 @@ span {
 }
 
 nav {
-  margin-right: 40px;
-
   @media (max-width:767px) {
-    margin-right: 0;
     margin-bottom: 5px;
   }
 }
@@ -85,7 +83,7 @@ nav {
   color: white;
   font-weight: bold;
   text-shadow: 1px 2px #000;
-  margin: 10px 20px 10px 40px;
+  margin: 10px 20px 10px 0;
   font-size: 40px;
 
   @media (max-width:767px) {
