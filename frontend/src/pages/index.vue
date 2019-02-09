@@ -9,10 +9,10 @@
     <search/>
     <stat/>
     <div class="card-wrapper">
-      <card img="http://alekolau.cn/trialect/intro.png" title="方言概况" info="简要介绍茂名地区方言现状以及分布" addr="/intro"></card>
-      <card img="http://alekolau.cn/trialect/pinyin.jpg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
-      <card img="http://alekolau.cn/trialect/download.jpg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
-      <card img="http://alekolau.cn/trialect/about.jpg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
+      <card img="assets/intro.png" title="方言概况" info="简要介绍茂名地区方言现状以及分布" addr="/intro"></card>
+      <card img="assets/pinyin.jpg" title="拼音方案" info="展示各方言拼音方案及其发音、例字" addr="/pinyin"></card>
+      <card img="assets/download.jpg" title="相关资料" info="提供茂名方言的资料、数据等的索引" addr="/resource"></card>
+      <card img="assets/about.jpg" title="关于本站" info="有关本站的信息和联系方式" addr="/about"></card>
     </div>
   </div>
 </template>
@@ -40,7 +40,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('http://alekolau.cn/trialect/quote-bg.jpg');
+    background: url('assets/quote-bg.jpg');
     background-size: cover;
 
     @media (max-width:767px) {

@@ -63,7 +63,7 @@ export default {
   name: 'about',
   components: { Paper },
   data: () => ({
-    sponsor: 'http://alekolau.cn/trialect/sponsor.png',
+    sponsor: 'assets/sponsor.png',
     intro: [
       { title: '为什么叫Trialect？', content: '茂名地区有三大类方言：粤语、闽语、客语。把代表「三」的 tri- 和方言 dialect 组合，就有了Trialect。' },
       { title: 'Trialect提供什么？', content: '目前提供三种方言的拼音方案和字音查询，另提供研究资料索引。未来将加入更多口音和在线发音。' },

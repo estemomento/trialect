@@ -1,7 +1,7 @@
 <template>
   <div class="introduction">
     <paper title="简介">
-      <a href="http://alekolau.cn/trialect/mmdialect.png"></a>
+      <a href="assets/mmdialect.png"></a>
       <p><strong>茂名方言地图（自制），点击观看大图</strong></p>
       <hr>
       <h2>一、概况</h2>
@@ -61,7 +61,7 @@ export default {
 .introduction {
   a {
     display: block;
-    background: url('http://alekolau.cn/trialect/intro.png') no-repeat;
+    background: url('assets/intro.png') no-repeat;
     width: 250px;
     height: 259px;
   }
